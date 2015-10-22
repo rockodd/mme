@@ -1,0 +1,38 @@
+h1 {
+	font-style:italic;
+}
+
+body {
+            background: #6495ed;
+            margin: 20px;
+    }
+        #container {
+            max-width: 960px;
+			width: 100%;
+            background: white;
+        }	
+		content {
+                width: 60%;
+                padding: 0px;
+				
+            }
+			
+		aside{
+                width: 80px;
+                padding: 5px;
+				background: #CCC;
+				margin: 20px;
+				position:fixed;
+				right:0;
+				top:100px;
+            }
+			
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+
+		header {
+            width: 80%;
+            padding: 10px;
+        }

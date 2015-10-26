@@ -1,3 +1,6 @@
+
+
+
 h1 {
 	font-style:italic;
 }
@@ -5,34 +8,83 @@ h1 {
 body {
             background: #6495ed;
             margin: 20px;
+
+
     }
+	
+menu {
+	margin: 10px auto;
+}
+
         #container {
-            max-width: 960px;
 			width: 100%;
             background: white;
+			border-radius: 18px
+			
         }	
 		content {
-                width: 60%;
+                width: 80%;
                 padding: 0px;
+				text-align: center;
+				margin: 100px auto;
 				
+			
             }
 			
 		aside{
                 width: 80px;
-                padding: 5px;
+                padding: 1px;
 				background: #CCC;
 				margin: 20px;
 				position:fixed;
 				right:0;
 				top:100px;
+				text-align: center;
             }
-			
-		table, th, td {
-			border: 1px solid black;
+		table.tdata, table.tdata th, table.tdata td{
 			border-collapse: collapse;
+			padding: 10px;
+			border: solid 1px #707070;
+			box-shadow: 0 0 5px 1px #969696;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		table.tinput{
+		margin: 20px;
+					margin-left: auto;
+			margin-right: auto;
 		}
 
-		header {
-            width: 80%;
-            padding: 10px;
-        }
+		
+		
+		
+		 input {
+			padding: 10px;
+			border: solid 1px #dcdcdc;
+			transition: box-shadow 0.3s, border 0.3s;
+			width: 200px;
+			text-align: center;
+
+		}
+		input:focus,
+		input.focus {
+			border: solid 1px #707070;
+			box-shadow: 0 0 5px 1px #969696;
+		}
+
+
+		header, .full-width {
+		  width: 100%;
+		  background: #ccc;
+		  text-align: center;
+		  color: white;
+		}
+
+		#googleMap {
+		
+		width:500px;
+		height:380px;
+		margin: 80px;
+		margin-left: auto;
+		margin-right: auto;
+		}

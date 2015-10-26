@@ -7,10 +7,19 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<title>Student Timemanager</title>
 		
-		<style type="text/css">
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+		<script>
+		function initialize() {
+		  var mapProp = {
+			center:new google.maps.LatLng(52.544516,13.354815),
+			zoom:16,
+			mapTypeId:google.maps.MapTypeId.ROADMAP
+		  };
+		  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
 		
-		
-		</style>
 	</head>
 	
 	
@@ -19,8 +28,18 @@
 	<header>
 		<h1>Student Timemanager Webapp</h1>
 		</header>
+			<header>
+		<h1>Suche</h1>
+		</header>
 		<menu>
-		Filter
+			<a id="search"></a>
+		    <form id="filter">
+			<table class="tfilter">
+			  <input type="date" name="date">
+              <input type="date" name="date">
+              <input type="submit" value="Filter" name="filter">
+			  </table>
+            </form>
 		</menu>
 		<!--
 		          <nav>
@@ -33,7 +52,7 @@
           </nav>
 		  !-->
 		<content>
-			<table>
+			<table class="tdata">
 				<tr>
 					<th>Datum</th>
 					<th>Bezeichnung</th>
@@ -50,7 +69,8 @@
 					<td>21:00</td>
 					<td>14:00</td>
 					<td>Brainstorming</td>
-					<td><a href="location.html">Mensa</a></td>
+					<td><a href="#googleMap">Mensa</a></td>
+					<td><a href="#dataInput">Edit</a></td>
 				</tr>
 				
 				<tr>
@@ -60,7 +80,18 @@
 					<td>20:30</td>
 					<td>14:30</td>
 					<td>Papier-Entwurf</td>
-					<td><a href="location.html">Mensa</a></td>
+					<td><a href="#googleMap">Mensa</a></td>
+					<td><a href="#dataInput">Edit</a></td>
+				</tr>
+				<tr>
+					<td>18.10.2015</td>
+					<td>MME-Projekt</td>
+					<td>10:00</td>
+					<td>17:00</td>
+					<td>07:00</td>
+					<td>erster HTML-Entwurf</td>
+					<td><a href="#googleMap">Mensa</a></td>
+					<td><a href="#dataInput">Edit</a></td>
 				</tr>
 				<tr>
 					<td>19.10.2015</td>
@@ -69,18 +100,110 @@
 					<td>17:00</td>
 					<td>07:00</td>
 					<td>erster HTML-Entwurf</td>
-					<td><a href="location.html">Mensa</a></td>
+					<td><a href="#googleMap">Mensa</a></td>
+					<td><a href="#dataInput">Edit</a></td>
 				</tr>
-				
+								<tr>
+					<td>20.10.2015</td>
+					<td>MME-Projekt</td>
+					<td>10:00</td>
+					<td>17:00</td>
+					<td>07:00</td>
+					<td>erster HTML-Entwurf</td>
+					<td><a href="#googleMap">Mensa</a></td>
+					<td><a href="#dataInput">Edit</a></td>
+				</tr>
+				<tr>
+					<td>21.10.2015</td>
+					<td>MME-Projekt</td>
+					<td>10:00</td>
+					<td>17:00</td>
+					<td>07:00</td>
+					<td>erster HTML-Entwurf</td>
+					<td><a href="#googleMap">Mensa</a></td>
+					<td><a href="#dataInput">Edit</a></td>
+				</tr>
+				<tr>
+					<td>22.10.2015</td>
+					<td>MME-Projekt</td>
+					<td>06:00</td>
+					<td>20:30</td>
+					<td>14:30</td>
+					<td>Papier-Entwurf</td>
+					<td><a href="#googleMap">Mensa</a></td>
+					<td><a href="#dataInput">Edit</a></td>
+				</tr>
+				<tr>
+					<td>23.10.2015</td>
+					<td>MME-Projekt</td>
+					<td>10:00</td>
+					<td>17:00</td>
+					<td>07:00</td>
+					<td>erster HTML-Entwurf</td>
+					<td><a href="#googleMap">Mensa</a></td>
+					<td><a href="#dataInput">Edit</a></td>
+				</tr>
+				<tr>
+					<td>24.10.2015</td>
+					<td>MME-Projekt</td>
+					<td>06:00</td>
+					<td>20:30</td>
+					<td>14:30</td>
+					<td>Papier-Entwurf</td>
+					<td><a href="#googleMap">Mensa</a></td><td><a href="#dataInput">Edit</a></td>
+				</tr>
 			</table>
 		</content>
-		<aside> LINKS </aside>
-		<footer>
-			<img src="mond.png" width="600" height="230" alt="Mond mit Wolken">
-			<br>	
+			<header>
+		<h1>Standort</h1>
+		</header>
+		<div id="googleMap" >
+		<a id="googleMap"></a>
+		</div>
+			<header>
+		<h1>Datensatz erstellen/ändern</h1>
+		</header>
+		<div id="dataInput">
+			<a id="dataInput"></a>
+			<form action="">
+				<table class="tinput">
+					<tr>
+					<td>Datum:</td>
+					<td><input type="date" name="date" required></td>
+					</tr><tr>
+					<td>Bezeichnung: </td>
+					<td><input type="text" name="name" pattern="[A-Za-z]{3}" required></td>
+					</tr><tr>
+					<td>Start: </td>
+					<td><input type="time" name="start" required></td>
+					</tr><tr>
+					<td>Ende: </td>
+					<td><input type="time" name="end" required></td>
+					</tr><tr>
+					<td>Bemerkung: </td>
+					<td><input type="text" name="subtext"></td>
+					</tr><tr>
+					<td></td>
+					<td><input type="submit" ></td></tr>
+				</table>
+				<br>
+			</form>
 			<br>
+		</div>
+		
+		<aside> 
+		<p>LINKS </p>
+		<p><a href="#top">Start</a><br>
+		<a href="#search">Suche</a><br>
+		<a href="#dataInput">Neu</a><br></p>
+		
+		
+		</aside>
+		<footer>
 			<a href="http://www.beuth-hochschule.de">Beuth Hochschule für Technik</a>
 		</footer>
+		
+		
 		
 		</div>
 		</body>

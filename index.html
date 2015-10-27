@@ -25,22 +25,36 @@
 	
 	<body>
 	<div id="container">
-	<header>
-		<h1>Student Timemanager Webapp</h1>
-		</header>
-			<header>
+	<header id="Top">
+		
+		<h1><img src="pictures/titel.png" alt="Student Timemanager Webapp" ></h1>
+      
+	  </header>
+	  
+	<div id="headlines">
+		<a id="search"></a>
 		<h1>Suche</h1>
-		</header>
-		<menu>
-			<a id="search"></a>
+		</div>
+		<div id="filter">
+			
+			
 		    <form id="filter">
-			<table class="tfilter">
-			  <input type="date" name="date">
-              <input type="date" name="date">
-              <input type="submit" value="Filter" name="filter">
-			  </table>
+			
+			<label size=200>Projekt</label>
+			<label>von</label>
+			<label>bis</label>
+			<br>
+			<select name="projects">
+			  <option value="SE-Projekt">SE-Projekt</option>
+			  <option value="MME-Projekt">MME-Projekt</option>
+			  <option value="FPA-Projekt">FPA-Projekt</option>
+				</select>
+				<input type="date" name="date">
+				<input type="date" name="date">
+				<input type="submit" value="Filter" name="filter">
+				
             </form>
-		</menu>
+		</div>
 		<!--
 		          <nav>
              <h2>Navigation</h2>
@@ -51,6 +65,11 @@
                 </ul>
           </nav>
 		  !-->
+		<div id="headlines">
+		<a id="data"></a>
+		<h1>Workload</h1>
+		</div>
+		  
 		<content>
 			<table class="tdata">
 				<tr>
@@ -61,15 +80,16 @@
 					<th>Gesamt</th>
 					<th>Bemerkung</th>
 					<th>Ort</th>
+					<th></th>
 				</tr>
 				<tr>
 					<td>05.10.2015</td>
-					<td>MME-Projekt</td>
+					<td>FPA-Projekt</td>
 					<td>07:00</td>
 					<td>21:00</td>
 					<td>14:00</td>
 					<td>Brainstorming</td>
-					<td><a href="#googleMap">Mensa</a></td>
+					<td><a href="#map">Mensa</a></td>
 					<td><a href="#dataInput">Edit</a></td>
 				</tr>
 				
@@ -80,7 +100,7 @@
 					<td>20:30</td>
 					<td>14:30</td>
 					<td>Papier-Entwurf</td>
-					<td><a href="#googleMap">Mensa</a></td>
+					<td><a href="#map">Mensa</a></td>
 					<td><a href="#dataInput">Edit</a></td>
 				</tr>
 				<tr>
@@ -90,17 +110,17 @@
 					<td>17:00</td>
 					<td>07:00</td>
 					<td>erster HTML-Entwurf</td>
-					<td><a href="#googleMap">Mensa</a></td>
+					<td><a href="#map">Mensa</a></td>
 					<td><a href="#dataInput">Edit</a></td>
 				</tr>
 				<tr>
 					<td>19.10.2015</td>
-					<td>MME-Projekt</td>
+					<td>SE-Projekt</td>
 					<td>10:00</td>
 					<td>17:00</td>
 					<td>07:00</td>
 					<td>erster HTML-Entwurf</td>
-					<td><a href="#googleMap">Mensa</a></td>
+					<td><a href="#map">Mensa</a></td>
 					<td><a href="#dataInput">Edit</a></td>
 				</tr>
 								<tr>
@@ -110,7 +130,7 @@
 					<td>17:00</td>
 					<td>07:00</td>
 					<td>erster HTML-Entwurf</td>
-					<td><a href="#googleMap">Mensa</a></td>
+					<td><a href="#map">Mensa</a></td>
 					<td><a href="#dataInput">Edit</a></td>
 				</tr>
 				<tr>
@@ -120,17 +140,17 @@
 					<td>17:00</td>
 					<td>07:00</td>
 					<td>erster HTML-Entwurf</td>
-					<td><a href="#googleMap">Mensa</a></td>
+					<td><a href="#map">Mensa</a></td>
 					<td><a href="#dataInput">Edit</a></td>
 				</tr>
 				<tr>
 					<td>22.10.2015</td>
-					<td>MME-Projekt</td>
+					<td>SE-Projekt</td>
 					<td>06:00</td>
 					<td>20:30</td>
 					<td>14:30</td>
 					<td>Papier-Entwurf</td>
-					<td><a href="#googleMap">Mensa</a></td>
+					<td><a href="#map">Mensa</a></td>
 					<td><a href="#dataInput">Edit</a></td>
 				</tr>
 				<tr>
@@ -140,7 +160,7 @@
 					<td>17:00</td>
 					<td>07:00</td>
 					<td>erster HTML-Entwurf</td>
-					<td><a href="#googleMap">Mensa</a></td>
+					<td><a href="#map">Mensa</a></td>
 					<td><a href="#dataInput">Edit</a></td>
 				</tr>
 				<tr>
@@ -150,21 +170,22 @@
 					<td>20:30</td>
 					<td>14:30</td>
 					<td>Papier-Entwurf</td>
-					<td><a href="#googleMap">Mensa</a></td><td><a href="#dataInput">Edit</a></td>
+					<td><a href="#map">Mensa</a></td>
+					</td><td><a href="#dataInput">Edit</a></td>
 				</tr>
 			</table>
 		</content>
-			<header>
+		<div id="headlines">
+		<a id="map"</a>
 		<h1>Standort</h1>
-		</header>
-		<div id="googleMap" >
-		<a id="googleMap"></a>
 		</div>
-			<header>
+		<div id="googleMap"></div>
+		<div id="headlines">
+		<a id="dataInput"></a>
 		<h1>Datensatz erstellen/ändern</h1>
-		</header>
+		</div>
 		<div id="dataInput">
-			<a id="dataInput"></a>
+			
 			<form action="">
 				<table class="tinput">
 					<tr>
@@ -191,17 +212,34 @@
 			<br>
 		</div>
 		
-		<aside> 
-		<p>LINKS </p>
-		<p><a href="#top">Start</a><br>
-		<a href="#search">Suche</a><br>
-		<a href="#dataInput">Neu</a><br></p>
+		<div id="headlines">
+		<a id="stats"</a>
+		<h1>Auswertung</h1>
+		</div>
+		<div id="stats">
+		<img src="pictures/Pie_Chart.png">
+			</div>
 		
+		<aside> 
+		<p><a href="#top"><img src="pictures/home.png" alt="Start" /></a></p>
+		<p><a href="#top"><img src="pictures/user.png" alt="Benutzer" /></a></p>
+		<p><a href="#search"><img src="pictures/search.png" alt="Suche" /></a></p>
+		<p><a href="#data"><img src="pictures/calendar.png" alt="Tabelle" /></a></p>
+		<p><a href="#map"><img src="pictures/location-pin.png" alt="Standort" /></a></p>
+		<p><a href="#dataInput"><img src="pictures/pencil.png" alt="Editieren" /></a></p>
+		<p><a href="#stats"><img src="pictures/stats-1.png" alt="Statistiken" /></a></p>
+	
 		
 		</aside>
-		<footer>
-			<a href="http://www.beuth-hochschule.de">Beuth Hochschule für Technik</a>
-		</footer>
+	<footer>
+		<address>
+			* Diese Webseite wurde von Robert Ullmann und Marlon Mattern gestaltet *
+			<br><br>
+			Multimedia-Engeneering I
+			
+		</address>
+
+	</footer>
 		
 		
 		

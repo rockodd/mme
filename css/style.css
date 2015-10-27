@@ -1,25 +1,39 @@
 
+header#top {
+	background-color: #808080;
 
+	height: 500px;
 
-h1 {
-	font-style:italic;
+}
+
+header h1, header h2 {
+			text-align: center;
+			color: gray;
 }
 
 body {
-            background: #6495ed;
-            margin: 20px;
-
+		font-family: Helvetica,Arial,sans-serif;
+        background: #6495ed;
+        margin: 30px;
+			
 
     }
 	
-menu {
-	margin: 10px auto;
+#filter {
+			margin: 20px;
+			height: 500px;
 }
+#filter input {
+	width:200px;
+}
+
+
 
         #container {
 			width: 100%;
-            background: white;
-			border-radius: 18px
+            background-image: url(../pictures/hintergrund.png);
+			border-radius: 30px
+			
 			
         }	
 		content {
@@ -35,49 +49,90 @@ menu {
                 width: 80px;
                 padding: 1px;
 				background: #CCC;
-				margin: 20px;
+				margin: 30px;
 				position:fixed;
 				right:0;
 				top:100px;
 				text-align: center;
             }
-		table.tdata, table.tdata th, table.tdata td{
-			border-collapse: collapse;
+
+		table.tdata td {
+			padding: 3%;
+			text-align: left;
+			border-bottom: 2px solid #FFAD5C;
+			
+		}
+		
+		table.tdata {
 			padding: 10px;
-			border: solid 1px #707070;
-			box-shadow: 0 0 5px 1px #969696;
 			margin-left: auto;
 			margin-right: auto;
+			border-spacing: 0px;
+			
 		}
+		
+		
+		table.tdata th{
+			padding: 10px;
+			/*border: solid 1px #707070;*/
+			/*box-shadow: 0 0 5px 1px #969696;*/
+			border-collapse: collapse;
+			background: #FFAD5C;
+			color:white;
+
+			border-spacing: 0px;
+			
+		}
+		table.tdata tr{
+
+			
+			
+		}
+		
+		
+		
+		table.tdata th:first-child{
+			border-top-left-radius: 8px;
+		}
+		table.tdata th:last-child{
+			border-top-right-radius: 8px;
+		}
+		
+		
 		table.tinput{
 		margin: 20px;
-					margin-left: auto;
+			margin-left: auto;
 			margin-right: auto;
 		}
 
 		
 		
 		
-		 input {
+		 input  , select{
 			padding: 10px;
 			border: solid 1px #dcdcdc;
 			transition: box-shadow 0.3s, border 0.3s;
 			width: 200px;
-			text-align: center;
 
 		}
-		input:focus,
+		input:focus, select:focus, select.focus
 		input.focus {
 			border: solid 1px #707070;
 			box-shadow: 0 0 5px 1px #969696;
 		}
 
 
-		header, .full-width {
+		#headlines, .full-width {
+			/*
 		  width: 100%;
-		  background: #ccc;
-		  text-align: center;
+		  background: #FFAD5C;
+		   border-top: 1px solid #8c8c8c;	/* Rahmenbreite, Rahmenstyle, Rahmenfarbe
+		  
+		  */
 		  color: white;
+		  text-align: center;
+		  box-shadow: 0px -2px 2px gray;
+		 
 		}
 
 		#googleMap {
@@ -88,3 +143,20 @@ menu {
 		margin-left: auto;
 		margin-right: auto;
 		}
+	
+	#stats {
+		text-align: center;
+	}
+	
+
+address {
+	text-align: center;
+	font-size: 70%	
+}	
+
+footer {
+	padding: 10px; /* ABstand Rahmen - Text */
+	border-top: 1px solid #8c8c8c;	/* Rahmenbreite, Rahmenstyle, Rahmenfarbe */
+	margin-top: 20px;
+	letter-spacing: 1px;
+}

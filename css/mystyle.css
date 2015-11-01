@@ -1,0 +1,172 @@
+header#top {
+	background-color: #808080;
+
+	height: 500px;
+
+}
+
+header h1, header h2 {
+			text-align: center;
+			color: gray;
+}
+
+body {
+		font-family: Helvetica,Arial,sans-serif;
+        background: white;
+        margin: 30px;
+			
+
+    }
+	
+#filter {
+			margin: 20px;
+			height: 500px;
+}
+#filter input {
+	width:200px;
+}
+
+
+
+        #container {
+			width: 100%;
+            background-image: url(../pictures/hintergrund.png);
+			border-radius: 30px
+			
+			
+        }	
+		content {
+                width: 80%;
+                padding: 0px;
+				text-align: center;
+				margin: 100px auto;
+				
+			
+            }
+			
+		aside{
+                width: 80px;
+                padding: 1px;
+				background: #CCC;
+				margin: 30px;
+				position:fixed;
+				right:0;
+				top:100px;
+				text-align: center;
+            }
+        
+        
+
+        a {text-decoration: none;}
+
+		table.tdata td {
+			padding: 3%;
+			text-align: left;
+			border-bottom: 2px solid #FFAD5C;
+			
+		}
+		
+		table.tdata {
+			padding: 10px;
+			margin-left: auto;
+			margin-right: auto;
+			border-spacing: 0px;
+			
+		}
+		
+		
+		table.tdata th{
+			padding: 10px;
+			/*border: solid 1px #707070;*/
+			/*box-shadow: 0 0 5px 1px #969696;*/
+			border-collapse: collapse;
+			background: #FFAD5C;
+			color:white;
+
+			border-spacing: 0px;
+			
+		}
+		table.tdata tr{
+
+			
+			
+		}
+		
+		
+		
+		table.tdata th:first-child{
+			border-top-left-radius: 8px;
+		}
+		table.tdata th:last-child{
+			border-top-right-radius: 8px;
+		}
+		
+		
+		table.tinput{
+		margin: 20px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		 
+		
+
+		
+		
+		
+		 input  , select{
+			padding: 10px;
+			border: solid 1px #dcdcdc;
+			transition: box-shadow 0.3s, border 0.3s;
+			width: 200px;
+
+
+		}
+		input:focus, select:focus, select.focus
+		input.focus {
+			border: solid 1px #707070;
+			box-shadow: 0 0 5px 1px #969696;
+		}
+
+
+		#headlines, .full-width {
+			/*
+		  width: 100%;
+		  background: #FFAD5C;
+		   border-top: 1px solid #8c8c8c;	/* Rahmenbreite, Rahmenstyle, Rahmenfarbe
+		  
+		  */
+		  color: #FFAD5C;
+		  text-align: center;
+		  box-shadow: 0px -2px 2px gray;
+		 
+		}
+
+		#googleMap {
+		
+		width:500px;
+		height:380px;
+		margin: 80px;
+		margin-left: auto;
+		margin-right: auto;
+		}
+	
+	#stats {
+		text-align: center;
+	}
+	
+
+address {
+	text-align: center;
+	font-size: 70%	
+}	
+
+footer {
+	padding: 10px; /* ABstand Rahmen - Text */
+	border-top: 1px solid #8c8c8c;	/* Rahmenbreite, Rahmenstyle, Rahmenfarbe */
+	margin-top: 20px;
+	letter-spacing: 1px;
+}
+
+
+

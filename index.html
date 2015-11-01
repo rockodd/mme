@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="description" content="Student Timemanager">
-		<meta name="author" content="Robert">
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<title>Student Timemanager</title>
-		
-		<script src="http://maps.googleapis.com/maps/api/js"></script>
-		<script>
-		function initialize() {
-		  var mapProp = {
-			center:new google.maps.LatLng(52.544516,13.354815),
-			zoom:16,
-			mapTypeId:google.maps.MapTypeId.ROADMAP
-		  };
-		  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-		}
-		google.maps.event.addDomListener(window, 'load', initialize);
-		</script>
-		
-	</head>
-	
-	
-	<body>
-	<div id="container">
-	<header id="Top">
-		
-		<h1><img src="pictures/titel.png" alt="Student Timemanager Webapp" ></h1>
+  <head>
+    <meta name="description" content="Student Timemanager">
+    <meta name="author" content="Robert">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
+    <title>Student Timemanager</title>
+    
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+    function initialize() {
+      var mapProp = {
+      center:new google.maps.LatLng(52.544516,13.354815),
+      zoom:16,
+      mapTypeId:google.maps.MapTypeId.ROADMAP
+      };
+      var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    
+  </head>
+  
+  
+  <body>
+  <div id="container">
+  <header id="Top">
+    
+    <h1><img src="pictures/titel.png" alt="Student Timemanager Webapp" ></h1>
       
-	  </header>
-	  
-	<div id="headlines">
-		<a id="search"></a>
-		<h1>Suche</h1>
-		</div>
-		<div id="filter">
-			
-			
-		    <form id="filter">
-			
-			<label size=200>Projekt</label>
-			<label>von</label>
-			<label>bis</label>
-			<br>
-			<select name="projects">
-			  <option value="SE-Projekt">SE-Projekt</option>
-			  <option value="MME-Projekt">MME-Projekt</option>
-			  <option value="FPA-Projekt">FPA-Projekt</option>
-				</select>
-				<input type="date" name="date">
-				<input type="date" name="date">
-				<input type="submit" value="Filter" name="filter">
-				
+    </header>
+    
+  <div id="headlines">
+    <a id="search"></a>
+    <h1>Suche</h1>
+    </div>
+    <div id="filter">
+      
+      
+        <form id="filter">
+      
+      <label size=200>Projekt</label>
+      <label>von</label>
+      <label>bis</label>
+      <br>
+      <select name="projects">
+        <option value="SE-Projekt">SE-Projekt</option>
+        <option value="MME-Projekt">MME-Projekt</option>
+        <option value="FPA-Projekt">FPA-Projekt</option>
+        </select>
+        <input type="date" name="date">
+        <input type="date" name="date">
+        <input type="submit" value="Filter" name="filter">
+        
             </form>
-		</div>
-		<!--
-		          <nav>
+    </div>
+    <!--
+              <nav>
              <h2>Navigation</h2>
                 <ul>
                     <li><a...> Link 1</a></li>
@@ -64,194 +64,194 @@
                     <li><a...> Link 3</a></li>
                 </ul>
           </nav>
-		  !-->
-		<div id="headlines">
-		<a id="data"></a>
-		<h1>Workload</h1>
-		</div>
-		  
-		<content>
-			<table class="tdata">
-				<tr>
-					<th>Datum</th>
-					<th>Bezeichnung</th>
-					<th>Start</th>
-					<th>Ende</th>
-					<th>Gesamt</th>
-					<th>Bemerkung</th>
-					<th>Ort</th>
-					<th></th>
-				</tr>
-				<tr>
-					<td>05.10.2015</td>
-					<td>FPA-Projekt</td>
-					<td>07:00</td>
-					<td>21:00</td>
-					<td>14:00</td>
-					<td>Brainstorming</td>
-					<td><a href="#map">Mensa</a></td>
-					<td><a href="#dataInput">Edit</a></td>
-				</tr>
-				
-				<tr>
-					<td>12.10.2015</td>
-					<td>MME-Projekt</td>
-					<td>06:00</td>
-					<td>20:30</td>
-					<td>14:30</td>
-					<td>Papier-Entwurf</td>
-					<td><a href="#map">Mensa</a></td>
-					<td><a href="#dataInput">Edit</a></td>
-				</tr>
-				<tr>
-					<td>18.10.2015</td>
-					<td>MME-Projekt</td>
-					<td>10:00</td>
-					<td>17:00</td>
-					<td>07:00</td>
-					<td>erster HTML-Entwurf</td>
-					<td><a href="#map">Mensa</a></td>
-					<td><a href="#dataInput">Edit</a></td>
-				</tr>
-				<tr>
-					<td>19.10.2015</td>
-					<td>SE-Projekt</td>
-					<td>10:00</td>
-					<td>17:00</td>
-					<td>07:00</td>
-					<td>erster HTML-Entwurf</td>
-					<td><a href="#map">Mensa</a></td>
-					<td><a href="#dataInput">Edit</a></td>
-				</tr>
-								<tr>
-					<td>20.10.2015</td>
-					<td>MME-Projekt</td>
-					<td>10:00</td>
-					<td>17:00</td>
-					<td>07:00</td>
-					<td>erster HTML-Entwurf</td>
-					<td><a href="#map">Mensa</a></td>
-					<td><a href="#dataInput">Edit</a></td>
-				</tr>
-				<tr>
-					<td>21.10.2015</td>
-					<td>MME-Projekt</td>
-					<td>10:00</td>
-					<td>17:00</td>
-					<td>07:00</td>
-					<td>erster HTML-Entwurf</td>
-					<td><a href="#map">Mensa</a></td>
-					<td><a href="#dataInput">Edit</a></td>
-				</tr>
-				<tr>
-					<td>22.10.2015</td>
-					<td>SE-Projekt</td>
-					<td>06:00</td>
-					<td>20:30</td>
-					<td>14:30</td>
-					<td>Papier-Entwurf</td>
-					<td><a href="#map">Mensa</a></td>
-					<td><a href="#dataInput">Edit</a></td>
-				</tr>
-				<tr>
-					<td>23.10.2015</td>
-					<td>MME-Projekt</td>
-					<td>10:00</td>
-					<td>17:00</td>
-					<td>07:00</td>
-					<td>erster HTML-Entwurf</td>
-					<td><a href="#map">Mensa</a></td>
-					<td><a href="#dataInput">Edit</a></td>
-				</tr>
-				<tr>
-					<td>24.10.2015</td>
-					<td>MME-Projekt</td>
-					<td>06:00</td>
-					<td>20:30</td>
-					<td>14:30</td>
-					<td>Papier-Entwurf</td>
-					<td><a href="#map">Mensa</a></td>
-					</td><td><a href="#dataInput">Edit</a></td>
-				</tr>
-			</table>
-		</content>
-		<div id="headlines">
-		<a id="map"</a>
-		<h1>Standort</h1>
-		</div>
-		<div id="googleMap"></div>
-		<div id="headlines">
-		<a id="dataInput"></a>
-		<h1>Datensatz erstellen/ändern</h1>
-		</div>
-		<div id="dataInput">
-			
-			<form action="">
-				<table class="tinput">
-					<tr>
-					<td>Datum:</td>
-					<td><input type="date" name="date" required></td>
-					</tr><tr>
-					<td>Bezeichnung: </td>
-					<td><input type="text" name="name" pattern="[A-Za-z]{3}" required></td>
-					</tr><tr>
-					<td>Start: </td>
-					<td><input type="time" name="start" required></td>
-					</tr><tr>
-					<td>Ende: </td>
-					<td><input type="time" name="end" required></td>
-					</tr><tr>
-					<td>Bemerkung: </td>
-					<td><input type="text" name="subtext"></td>
-					</tr><tr>
-					<td></td>
-					<td><input type="submit" ></td></tr>
-				</table>
-				<br>
-			</form>
-			<br>
-		</div>
-		
-		<div id="headlines">
-		<a id="stats"</a>
-		<h1>Auswertung</h1>
-		</div>
-		<div id="stats">
-		<img src="pictures/Pie_Chart.png">
-			</div>
-		
-		<aside> 
-		<p><a href="#top"><img src="pictures/home.png" alt="Start" /></a></p>
-		<p><a href="#top"><img src="pictures/user.png" alt="Benutzer" /></a></p>
-		<p><a href="#search"><img src="pictures/search.png" alt="Suche" /></a></p>
-		<p><a href="#data"><img src="pictures/calendar.png" alt="Tabelle" /></a></p>
-		<p><a href="#map"><img src="pictures/location-pin.png" alt="Standort" /></a></p>
-		<p><a href="#dataInput"><img src="pictures/pencil.png" alt="Editieren" /></a></p>
-		<p><a href="#stats"><img src="pictures/stats-1.png" alt="Statistiken" /></a></p>
-	
-		
-		</aside>
-	<footer>
-		<address>
-			* Diese Webseite wurde von Robert Ullmann und Marlon Mattern gestaltet *
-			<br><br>
-			Multimedia-Engeneering I
-			
-		</address>
+      !-->
+    <div id="headlines">
+    <a id="data"></a>
+    <h1>Workload</h1>
+    </div>
+      
+    <content>
+      <table class="tdata">
+        <tr>
+          <th>Datum</th>
+          <th>Bezeichnung</th>
+          <th>Start</th>
+          <th>Ende</th>
+          <th>Gesamt</th>
+          <th>Bemerkung</th>
+          <th>Ort</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>05.10.2015</td>
+          <td>FPA-Projekt</td>
+          <td>07:00</td>
+          <td>21:00</td>
+          <td>14:00</td>
+          <td>Brainstorming</td>
+          <td><a href="#map">Mensa</a></td>
+          <td><a href="#dataInput">Edit</a></td>
+        </tr>
+        
+        <tr>
+          <td>12.10.2015</td>
+          <td>MME-Projekt</td>
+          <td>06:00</td>
+          <td>20:30</td>
+          <td>14:30</td>
+          <td>Papier-Entwurf</td>
+          <td><a href="#map">Mensa</a></td>
+          <td><a href="#dataInput">Edit</a></td>
+        </tr>
+        <tr>
+          <td>18.10.2015</td>
+          <td>MME-Projekt</td>
+          <td>10:00</td>
+          <td>17:00</td>
+          <td>07:00</td>
+          <td>erster HTML-Entwurf</td>
+          <td><a href="#map">Mensa</a></td>
+          <td><a href="#dataInput">Edit</a></td>
+        </tr>
+        <tr>
+          <td>19.10.2015</td>
+          <td>SE-Projekt</td>
+          <td>10:00</td>
+          <td>17:00</td>
+          <td>07:00</td>
+          <td>erster HTML-Entwurf</td>
+          <td><a href="#map">Mensa</a></td>
+          <td><a href="#dataInput">Edit</a></td>
+        </tr>
+                <tr>
+          <td>20.10.2015</td>
+          <td>MME-Projekt</td>
+          <td>10:00</td>
+          <td>17:00</td>
+          <td>07:00</td>
+          <td>erster HTML-Entwurf</td>
+          <td><a href="#map">Mensa</a></td>
+          <td><a href="#dataInput">Edit</a></td>
+        </tr>
+        <tr>
+          <td>21.10.2015</td>
+          <td>MME-Projekt</td>
+          <td>10:00</td>
+          <td>17:00</td>
+          <td>07:00</td>
+          <td>erster HTML-Entwurf</td>
+          <td><a href="#map">Mensa</a></td>
+          <td><a href="#dataInput">Edit</a></td>
+        </tr>
+        <tr>
+          <td>22.10.2015</td>
+          <td>SE-Projekt</td>
+          <td>06:00</td>
+          <td>20:30</td>
+          <td>14:30</td>
+          <td>Papier-Entwurf</td>
+          <td><a href="#map">Mensa</a></td>
+          <td><a href="#dataInput">Edit</a></td>
+        </tr>
+        <tr>
+          <td>23.10.2015</td>
+          <td>MME-Projekt</td>
+          <td>10:00</td>
+          <td>17:00</td>
+          <td>07:00</td>
+          <td>erster HTML-Entwurf</td>
+          <td><a href="#map">Mensa</a></td>
+          <td><a href="#dataInput">Edit</a></td>
+        </tr>
+        <tr>
+          <td>24.10.2015</td>
+          <td>MME-Projekt</td>
+          <td>06:00</td>
+          <td>20:30</td>
+          <td>14:30</td>
+          <td>Papier-Entwurf</td>
+          <td><a href="#map">Mensa</a></td>
+          </td><td><a href="#dataInput">Edit</a></td>
+        </tr>
+      </table>
+    </content>
+    <div id="headlines">
+    <a id="map"</a>
+    <h1>Standort</h1>
+    </div>
+    <div id="googleMap"></div>
+    <div id="headlines">
+    <a id="dataInput"></a>
+    <h1>Datensatz erstellen/ändern</h1>
+    </div>
+    <div id="dataInput">
+      
+      <form action="">
+        <table class="tinput">
+          <tr>
+          <td>Datum:</td>
+          <td><input type="date" name="date" required></td>
+          </tr><tr>
+          <td>Bezeichnung: </td>
+          <td><input type="text" name="name" pattern="[A-Za-z]{3}" required></td>
+          </tr><tr>
+          <td>Start: </td>
+          <td><input type="time" name="start" required></td>
+          </tr><tr>
+          <td>Ende: </td>
+          <td><input type="time" name="end" required></td>
+          </tr><tr>
+          <td>Bemerkung: </td>
+          <td><input type="text" name="subtext"></td>
+          </tr><tr>
+          <td></td>
+          <td><input type="submit" ></td></tr>
+        </table>
+        <br>
+      </form>
+      <br>
+    </div>
+    
+    <div id="headlines">
+    <a id="stats"</a>
+    <h1>Auswertung</h1>
+    </div>
+    <div id="stats">
+    <img src="pictures/Pie_Chart.png">
+      </div>
+    
+    <aside> 
+    <p><a href="#top"><img src="pictures/home.png" alt="Start" /></a></p>
+    <p><a href="#top"><img src="pictures/user.png" alt="Benutzer" /></a></p>
+    <p><a href="#search"><img src="pictures/search.png" alt="Suche" /></a></p>
+    <p><a href="#data"><img src="pictures/calendar.png" alt="Tabelle" /></a></p>
+    <p><a href="#map"><img src="pictures/location-pin.png" alt="Standort" /></a></p>
+    <p><a href="#dataInput"><img src="pictures/pencil.png" alt="Editieren" /></a></p>
+    <p><a href="#stats"><img src="pictures/stats-1.png" alt="Statistiken" /></a></p>
+  
+    
+    </aside>
+  <footer>
+    <address>
+      * Diese Webseite wurde von Robert Ullmann und Marlon Mattern gestaltet *
+      <br><br>
+      Multimedia-Engeneering I
+      
+    </address>
 
-	</footer>
-		
-		
-		
-		</div>
-		</body>
-	
-	
-	
-	
+  </footer>
+    
+    
+    
+    </div>
+    </body>
+  
+  
+  
+  
 
-	
-	
-	
-	
+  
+  
+  
+  
 </html>

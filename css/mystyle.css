@@ -12,7 +12,7 @@ header h1, header h2 {
 
 body {
 		font-family: Helvetica,Arial,sans-serif;
-        background: white;
+        background: rgba(0,0,0,0.3);
         margin: 30px;
 			
 
@@ -20,41 +20,59 @@ body {
 	
 #filter {
 			margin: 20px;
-			height: 500px;
-}
-#filter input {
+			height: 100px;
+			text-align: center;
+			}
+
+
+
+#filter input, label {
 	width:200px;
+    display:block;
+}
+
+table.tfilter{
+    width:70%; 
+    margin-left:15%; 
+    margin-right:15%;
 }
 
 
-
-        #container {
-			width: 100%;
-            background-image: url(../pictures/hintergrund.png);
-			border-radius: 30px
+#container {
+	width: 100%;
+	background-image: url(../pictures/hintergrund.png);
+	border-radius: 30px
+	
+	
+}	
+content {
+		width: 80%;
+		padding: 0px;
+		text-align: center;
+		margin: 100px auto;
+		
+	
+	}
 			
-			
-        }	
-		content {
-                width: 80%;
-                padding: 0px;
-				text-align: center;
-				margin: 100px auto;
-				
-			
-            }
-			
-		aside{
-                width: 80px;
-                padding: 1px;
-				background: #CCC;
-				margin: 30px;
-				position:fixed;
-				right:0;
-				top:100px;
-				text-align: center;
-            }
+aside{
+		width: 80px;
+		padding: 1px;
+		background: #CCC;
+		margin: 30px;
+		position:fixed;
+		right:0;
+		top:100px;
+		text-align: center;
+	}
         
+aside img {
+    opacity: 0.3;
+}
+			
+			
+aside img:hover {
+    opacity: 1;
+}
         
 
         a {text-decoration: none;}
@@ -108,12 +126,6 @@ body {
 			margin-right: auto;
 		}
 
-		 
-		
-
-		
-		
-		
 		 input  , select{
 			padding: 10px;
 			border: solid 1px #dcdcdc;

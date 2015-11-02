@@ -27,7 +27,7 @@
   <div id="container">
   <header id="Top">
     
-    <h1><img src="pictures/titel.png" alt="Student Timemanager Webapp" ></h1>
+    <h1><img src="pictures/watch.png" alt="Student Timemanager Webapp" ></h1>
       
     </header>
     
@@ -38,22 +38,26 @@
     <div id="filter">
       
       
-        <form id="filter">
-      
-      <label size=200>Projekt</label>
-      <label>von</label>
-      <label>bis</label>
-      <br>
-      <select name="projects">
-        <option value="SE-Projekt">SE-Projekt</option>
-        <option value="MME-Projekt">MME-Projekt</option>
-        <option value="FPA-Projekt">FPA-Projekt</option>
-        </select>
-        <input type="date" name="date">
-        <input type="date" name="date">
-        <input type="submit" value="Filter" name="filter">
-        
-            </form>
+    <form id="filter">
+		<table class="tfilter">
+		<tr>
+			<td><label for="projects">Projekt</label></td>
+			<td><label id="from">von</label></td>
+			<td><label id="to">bis</label></td>
+			<td><label id="button"> </label></td>
+		</tr>
+		<tr>
+			<td><select id="projects" name="projects">
+				<option value="SE-Projekt">SE-Projekt</option>
+				<option value="MME-Projekt">MME-Projekt</option>
+				<option value="FPA-Projekt">FPA-Projekt</option>
+				</select></td>
+			<td><input id="from" type="date" name="date"></td>
+			<td><input id="to" type="date" name="date"></td>
+			<td> <input id="button" type="submit" value="Filter" name="filter"></td>
+		</tr>    
+        </table>
+      </form>
     </div>
     <!--
               <nav>

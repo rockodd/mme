@@ -19,6 +19,7 @@
     }
     google.maps.event.addDomListener(window, 'load', initialize);
     </script>
+    <script type="text/javascript" src= "js/animation.js"></script>
     
   </head>
   
@@ -190,20 +191,20 @@
     </div>
     <div id="dataInput">
       
-      <form action="">
+      <form action="" onsubmit="return pruefen();" name = "Formular">
         <table class="tinput">
           <tr>
           <td>Datum:</td>
-          <td><input type="date" name="date" required></td>
+          <td><input type="date" name="date"></td>
           </tr><tr>
           <td>Bezeichnung: </td>
-          <td><input type="text" name="name" pattern="[A-Za-z]{3}" required></td>
+          <td><input type="text" name="name"></td>
           </tr><tr>
           <td>Start: </td>
-          <td><input type="time" name="start" required></td>
+          <td><input type="time" name="start"></td>
           </tr><tr>
           <td>Ende: </td>
-          <td><input type="time" name="end" required></td>
+          <td><input type="time" name="end"></td>
           </tr><tr>
           <td>Bemerkung: </td>
           <td><input type="text" name="subtext"></td>

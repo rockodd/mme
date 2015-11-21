@@ -1,13 +1,17 @@
 header#top {
 	background-color: #808080;
-
 	height: 500px;
 
 }
 
+header h1 img {
+	max-width: 100%;
+	height: auto;
+}
 header h1, header h2 {
 			text-align: center;
 			color: gray;
+
 }
 
 body {

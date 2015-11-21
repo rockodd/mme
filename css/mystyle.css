@@ -179,6 +179,8 @@ address {
 
 .errorMsg {
 	/*display:none; */
+	text-align: center;
+	font-size: 75%;
 	color:Red;
 }
 

@@ -11,23 +11,23 @@ function Bildwechsel(x) {
     }, 3000);
 }
 
-function Pruefen(){
+function submitPruefen(){
 
-    if(document.Formular.Name.value == "")
+    if(document.Formular.Name.value == "" || document.Formular.Name.value.length < 3 )
     {
-        alert("Bitte Text eintragen!");
+        alert("Bitte eine Bezeichnung eintragen!");
         document.Formular.Name.focus();
         return false;
     }
 
-    if(document.Formular.Subtext.value == "")
+    if(document.Formular.Subtext.value == "" || document.Formular.Subtext.value.length < 3 )
     {
-        alert("Bitte Text eintragen!");
+        alert("Bitte eine Bemerkung eintragen!");
         document.Formular.Subtext.focus();
         return false;
     }
 
-    if(new Date(document.Formular.Start.value) > new Date(document.Formular.Ende.value))
+    if(document.Formular.Date.value == "tt.mm.jjjj")
     {
         alert("falsch!");
         document.Formular.Start.focus();
@@ -36,11 +36,35 @@ function Pruefen(){
     }
 }
 
+n = document.getElementById("NameText");
+// add event listener to table
 
+n.addEventListener('change', function(){
+    if(document.Formular.Name.value == "" || document.Formular.Name.value.length < 3 )
+    {
+        document.getElementById("bezLabel").innerHTML="min. 3 Zeichen";
+    }
+    else document.getElementById("bezLabel").innerHTML="";
+});
 
-window.addEventListener("change",checkBez,false);
+s = document.getElementById("subtext");
+// add event listener to table
 
-function checkBez(){
+s.addEventListener('change', function(){
+    if(document.Formular.Name.value == "" || document.Formular.Name.value.length < 3 )
+    {
+        document.getElementById("bezLabel").innerHTML="min. 3 Zeichen";
+    }
+    else document.getElementById("bezLabel").innerHTML="";
+});
+/*
+window.getElementById("subLabel").addEventListener("change",checkBez,false);
+function checkBem(){
 
-    document.getElementById("bezLabel").innerHTML="min. 3 Zeichen";
-}
+    if(document.Formular.Subtext.value == "" || document.Formular.Subtext.value.length < 3 )
+    {
+        document.getElementById("subLabel").innerHTML="min. 3 Zeichen";
+    }
+    else document.getElementById("subLabel").innerHTML="";
+
+}*/

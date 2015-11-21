@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
     <title>Student Timemanager</title>
     
-<!--    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
     <script>
     function initialize() {
       var mapProp = {
@@ -18,7 +18,7 @@
       var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
     }
     google.maps.event.addDomListener(window, 'load', initialize);
-    </script>-->
+    </script>
 
   </head>
   
@@ -190,7 +190,7 @@
     </div>
     <div id="dataInput">
       
-      <form action="" id = "Form01"  name = "Formular" onSubmit = " return Pruefen()">
+      <form action="" id = "Form01"  name = "Formular" onSubmit = " return submitPruefen()">
         <table class="tinput">
           <tr>
           <td>Datum:</td>
@@ -222,18 +222,7 @@
           </tr><tr>
           <td></td>
           <td><label id="subLabel" class="errorMsg"></label></td>
-          </tr><tr>
-          <td>Zahl</td>
-          <td><input type="text" name="quantity" class="integer error"></td>
-          </tr><tr>
-          <td>Preis</td>
-          <td><input type="text" name="price" class="currency"></td>
-          </tr><tr>
-          <td></td>
           <td><input type="submit" ></td>
-
-
-
 
         </table>
         <br>
@@ -249,14 +238,14 @@
     <img src="pictures/Pie_Chart.png">
       </div>
     
-    <aside> 
-    <p><a href="#top"><img src="pictures/home.png" alt="Start" /></a></p>
-    <p><a href="#top"><img src="pictures/user.png" alt="Benutzer" /></a></p>
-    <p><a href="#search"><img src="pictures/search.png" alt="Suche" /></a></p>
-    <p><a href="#data"><img src="pictures/calendar.png" alt="Tabelle" /></a></p>
-    <p><a href="#map"><img src="pictures/location-pin.png" alt="Standort" /></a></p>
-    <p><a href="#dataInput"><img src="pictures/pencil.png" alt="Editieren" /></a></p>
-    <p><a href="#stats"><img src="pictures/stats-1.png" alt="Statistiken" /></a></p>
+    <aside id="menu">
+    <a href="#top"><img src="pictures/home.png" alt="Start" /></a>
+    <a href="#top"><img src="pictures/user.png" alt="Benutzer" /></a>
+    <a href="#search"><img src="pictures/search.png" alt="Suche" /></a>
+    <a href="#data"><img src="pictures/calendar.png" alt="Tabelle" /></a>
+    <a href="#map"><img src="pictures/location-pin.png" alt="Standort" /></a>
+    <a href="#dataInput"><img src="pictures/pencil.png" alt="Editieren" /></a>
+    <a href="#stats"><img src="pictures/stats-1.png" alt="Statistiken" /></a>
   
     
     </aside>

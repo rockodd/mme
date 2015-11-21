@@ -1,3 +1,5 @@
+
+
 header#top {
 	background-color: #808080;
 	height: 500px;
@@ -5,6 +7,7 @@ header#top {
 }
 
 header h1 img {
+	border-radius: 30px;
 	max-width: 100%;
 	height: auto;
 }
@@ -59,20 +62,39 @@ content {
 	}
 			
 aside{
-		width: 80px;
-		padding: 1px;
+		width: 600px;
+		padding: 10px;
 		background: #CCC;
 		margin: 30px;
 		position:fixed;
-		right:0;
-		top:100px;
+		top:0px;
 		text-align: center;
-	}
+		display: inline-block;
+	left: 50%;
+	margin-left: -300px; /* Half of the width */
+
+}
+
+.stuck {
+	margin: 0px;
+	left: 0px;
+	width: 100%;
+	opacity: 0.7;
+}
+
+.stuck:hover {
+	margin: 0px;
+	left: 0px;
+	width: 100%;
+	opacity: 1;
+}
+
         
 aside img {
+	margin: 20px;
     opacity: 0.3;
 }
-			
+
 			
 aside img:hover {
     opacity: 1;

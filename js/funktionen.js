@@ -27,18 +27,28 @@ function submitPruefen(){
         return false;
     }
 
-    if(document.Formular.Date.value == "tt.mm.jjjj")
+    if(document.Formular.Date.value == "")
     {
-        alert("falsch!");
+        alert("Bitte ein Datum eintragen!");
+        document.Formular.Date.focus();
+        return false;
+    }
+    if(document.Formular.Start.value == "")
+    {
+        alert("Bitte eine Startzeit eintragen!");
         document.Formular.Start.focus();
         return false;
-
+    }
+    if(document.Formular.End.value == "")
+    {
+        alert("Bitte eine Endzeit eintragen!");
+        document.Formular.End.focus();
+        return false;
     }
 }
 
+// Prüfen der Eingabe für Beschreibung sonst ErrorLabel einblenden
 n = document.getElementById("NameText");
-// add event listener to table
-
 n.addEventListener('change', function(){
     if(document.Formular.Name.value == "" || document.Formular.Name.value.length < 3 )
     {
@@ -47,24 +57,22 @@ n.addEventListener('change', function(){
     else document.getElementById("bezLabel").innerHTML="";
 });
 
+// Prüfen der Eingabe für Bemerkung sonst ErrorLabel einblenden
 s = document.getElementById("subtext");
-// add event listener to table
-
 s.addEventListener('change', function(){
-    if(document.Formular.Name.value == "" || document.Formular.Name.value.length < 3 )
-    {
-        document.getElementById("bezLabel").innerHTML="min. 3 Zeichen";
-    }
-    else document.getElementById("bezLabel").innerHTML="";
-});
-/*
-window.getElementById("subLabel").addEventListener("change",checkBez,false);
-function checkBem(){
-
     if(document.Formular.Subtext.value == "" || document.Formular.Subtext.value.length < 3 )
     {
         document.getElementById("subLabel").innerHTML="min. 3 Zeichen";
     }
     else document.getElementById("subLabel").innerHTML="";
+});
 
-}*/
+
+
+window.onscroll = function() {
+    var menu = document.getElementById('menu');
+    if( document.body.scrollTop+document.documentElement.scrollTop > 30)
+
+        menu.className = "stuck";
+    else menu.className = "";
+};

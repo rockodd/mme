@@ -200,6 +200,9 @@
           <td>Bezeichnung: </td>
           <td><input type="text" name="name"></td>
           </tr><tr>
+          <td></td>
+          <td><label id="bezLabel" class="errorMsg"></label></td>
+          </tr><tr>
           <td>Start: </td>
           <td><input type="time" name="start"></td>
           </tr><tr>
@@ -209,8 +212,19 @@
           <td>Bemerkung: </td>
           <td><input type="text" name="subtext"></td>
           </tr><tr>
+          </tr><tr>
+          <td>Zahl</td>
+          <td><input type="text" name="quantity" class="integer error"></td>
+          </tr><tr>
+          <td>Preis</td>
+          <td><input type="text" name="price" class="currency"></td>
+          </tr><tr>
           <td></td>
-          <td><input type="submit" ></td></tr>
+          <td><input type="submit" ></td>
+
+
+
+
         </table>
         <br>
       </form>

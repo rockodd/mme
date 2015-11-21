@@ -14,3 +14,10 @@ return false;
 }
 return true;
 }
+
+window.addEventListener("change",checkBez,false);
+
+function checkBez(){
+
+    document.getElementById("bezLabel").innerHTML="min. 3 Zeichen";
+}

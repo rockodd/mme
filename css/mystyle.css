@@ -171,7 +171,12 @@ aside img:hover {
 address {
 	text-align: center;
 	font-size: 70%	
-}	
+}
+
+.errorMsg {
+	/*display:none; */
+	color:Red;
+}
 
 footer {
 	padding: 10px; /* ABstand Rahmen - Text */

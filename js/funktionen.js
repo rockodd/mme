@@ -12,40 +12,52 @@ function Bildwechsel(x) {
 }
 
 function submitPruefen(){
+    var f = document.Formular;
+    var fehler = "";
 
     if(document.Formular.Name.value == "" || document.Formular.Name.value.length < 3 )
     {
-        alert("Bitte eine Bezeichnung eintragen!");
+        fehler += "-Bezeichnung\n";
         document.Formular.Name.focus();
-        return false;
+    
     }
 
     if(document.Formular.Subtext.value == "" || document.Formular.Subtext.value.length < 3 )
     {
-        alert("Bitte eine Bemerkung eintragen!");
+        fehler += "-Bemerkung\n";
         document.Formular.Subtext.focus();
-        return false;
+    
     }
 
     if(document.Formular.Date.value == "")
     {
-        alert("Bitte ein Datum eintragen!");
+        fehler += "-Datum\n";
         document.Formular.Date.focus();
-        return false;
+        
     }
     if(document.Formular.Start.value == "")
     {
-        alert("Bitte eine Startzeit eintragen!");
+        fehler += "-Start\n";
         document.Formular.Start.focus();
-        return false;
+        
     }
     if(document.Formular.End.value == "")
     {
-        alert("Bitte eine Endzeit eintragen!");
+        fehler += "-Ende\n";
         document.Formular.End.focus();
-        return false;
+        
     }
-}
+    if (fehler !="") {
+        var fehlertext = "Die folgenden Felder wurden nicht vollständig ausgefuellt:\n\n";
+        fehlertext += fehler;
+        alert(fehlertext + "\nBitte fuellen Sie die Informationen noch aus. Danke.");
+        return false;
+        }
+        return true;
+        }
+
+
+        
 
 // Prüfen der Eingabe für Beschreibung sonst ErrorLabel einblenden
 n = document.getElementById("NameText");

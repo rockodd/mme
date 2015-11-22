@@ -1,4 +1,4 @@
-// Bildwechsel
+﻿// Bildwechsel
 var images = new Array();
 images[0] = "pictures/startbild01.jpg ";
 images[1] = "pictures/startbild02.jpg ";
@@ -75,7 +75,7 @@ function submitPruefen(){
         
     }
     if (fehler !="") {
-        var fehlertext = "Die folgenden Felder wurden nicht vollst�ndig ausgefuellt:\n\n";
+        var fehlertext = "Die folgenden Felder wurden nicht vollständig ausgefüllt:\n\n";
         fehlertext += fehler;
         alert(fehlertext + "\nBitte fuellen Sie die Informationen noch aus. Danke.");
         return false;

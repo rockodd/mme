@@ -7,9 +7,12 @@ setTimeout("Bildwechsel(0)", 3000);
 function Bildwechsel(x) {
     document.getElementById("Foto01").src = images[x];
     timeoutId = setTimeout(function() {
-        Bildwechsel((x + 1) % images.length);
+        Bildwechsel((x + 1) % images.length).fadeIn();
     }, 3000);
 }
+
+
+
 
 // Einbindung von google Maps
     window.addEventListener('load',initialize);
@@ -30,9 +33,10 @@ function Bildwechsel(x) {
 window.addEventListener("load",initialisiereFunktion,false);
 
 function initialisiereFunktion(){
-    document.getElementById("Form01").onsubmit = function (event) {
+    submitBtn = document.getElementById("submitbtn");
+    submitBtn.addEventListener('click', function(){
         return submitPruefen();
-    }
+    });
 }
 function submitPruefen(){
     var f = document.Formular;
@@ -76,7 +80,7 @@ function submitPruefen(){
         alert(fehlertext + "\nBitte fuellen Sie die Informationen noch aus. Danke.");
         return false;
         }
-        return true;
+        InfoFenster();
         }
 
 
@@ -113,7 +117,6 @@ window.onscroll = function() {
 };
 
 
-InfoFenster();
 
 
 function InfoFenster() {
@@ -131,6 +134,4 @@ c.addEventListener('click', function(){
     overlay.style.display = "none";
     specialBox.style.display = "none";
 });
-
-
 

@@ -3,7 +3,7 @@
   <head>
     <meta name="description" content="Student Timemanager">
     <meta name="author" content="Robert">
-    <meta charset="utf-8">
+    <meta charset="ISO 8859-1">
     <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
     <title>Student Timemanager</title>
     
@@ -26,16 +26,17 @@
       <li>Willkommenoverlay</li>
 
     </ul>
-    <button id="Close">Fenster schließen</button>
+    <button id="Close" class="button">Fenster schließen</button>
   </div>
 
 
   <div id="container">
 
   <header id="Top">
-    
-    <h1><img src="pictures/startbild.jpg" id="Foto01" alt="Student Timemanager Webapp" ></h1>
-     
+
+    <div class="fade">
+      <h1><img src="pictures/startbild.jpg" id="Foto01" alt="Student Timemanager Webapp" ></h1>
+    </div>
     </header>
 
   <div id="headlines">
@@ -231,7 +232,7 @@
           <td><label id="subLabel" class="errorMsg"></label></td>
           </tr><tr>
           <td></td>
-          <td><input class="button" type="submit" ></td>
+          <td><input id="submitbtn" class="button" type="button" value="Absenden"></td>
         </table>
         <br>
       </form>

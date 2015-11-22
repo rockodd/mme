@@ -112,3 +112,25 @@ window.onscroll = function() {
     else menu.className = "";
 };
 
+
+InfoFenster();
+
+
+function InfoFenster() {
+    var overlay = document.getElementById('overlay');
+    var specialBox = document.getElementById('Box');
+    overlay.style.opacity = .8;
+        overlay.style.display = "block";
+        specialBox.style.display = "block";
+}
+
+c = document.getElementById('Close');
+c.addEventListener('click', function(){
+    var overlay = document.getElementById('overlay');
+    var specialBox = document.getElementById('Box');
+    overlay.style.display = "none";
+    specialBox.style.display = "none";
+});
+
+
+

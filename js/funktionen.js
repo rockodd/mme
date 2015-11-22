@@ -11,7 +11,7 @@ function Bildwechsel(x) {
     }, 3000);
 }
 
-
+// Einbindung von google Maps
     window.addEventListener('load',initialize);
     function initialize() {
       var mapProp = {

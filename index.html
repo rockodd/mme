@@ -7,19 +7,6 @@
     <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
     <title>Student Timemanager</title>
     
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
-    <script>
-    function initialize() {
-      var mapProp = {
-      center:new google.maps.LatLng(52.544516,13.354815),
-      zoom:16,
-      mapTypeId:google.maps.MapTypeId.ROADMAP
-      };
-      var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-
   </head>
   
   
@@ -190,7 +177,7 @@
     </div>
     <div id="dataInput">
       
-      <form action="" id = "Form01"  name = "Formular" onSubmit = " return submitPruefen()">
+      <form action="" id = "Form01"  name = "Formular">
         <table class="tinput">
           <tr>
           <td>Datum:</td>
@@ -269,8 +256,6 @@
 
 
 
-
-
-
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
   <script src="js/funktionen.js" type = "text/javascript"></script>
 </html>

@@ -1,4 +1,4 @@
-
+// Bildwechsel
 var images = new Array();
 images[0] = "pictures/startbild01.jpg ";
 images[1] = "pictures/startbild02.jpg ";
@@ -11,6 +11,29 @@ function Bildwechsel(x) {
     }, 3000);
 }
 
+
+    window.addEventListener('load',initialize);
+    function initialize() {
+      var mapProp = {
+      center:new google.maps.LatLng(52.544516,13.354815),
+      zoom:16,
+      mapTypeId:google.maps.MapTypeId.ROADMAP
+      };
+      var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    
+
+
+
+//Formulareingaben überprüfen
+window.addEventListener("load",initialisiereFunktion,false);
+
+function initialisiereFunktion(){
+    document.getElementById("Form01").onsubmit = function (event) {
+        return submitPruefen();
+    }
+}
 function submitPruefen(){
     var f = document.Formular;
     var fehler = "";
@@ -80,7 +103,7 @@ s.addEventListener('change', function(){
 });
 
 
-
+//Navigationsleiste fährt durch mit scrollen mit
 window.onscroll = function() {
     var menu = document.getElementById('menu');
     if( document.body.scrollTop+document.documentElement.scrollTop > 30)
@@ -88,3 +111,4 @@ window.onscroll = function() {
         menu.className = "stuck";
     else menu.className = "";
 };
+

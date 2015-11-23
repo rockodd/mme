@@ -75,9 +75,9 @@ function submitPruefen(){
         
     }
     if (fehler !="") {
-        var fehlertext = "Die folgenden Felder wurden nicht vollständig ausgefüllt:\n\n";
+        var fehlertext = "Die folgenden Felder wurden nicht korrekt ausgefüllt:\n\n";
         fehlertext += fehler;
-        alert(fehlertext + "\nBitte fuellen Sie die Informationen noch aus. Danke.");
+        alert(fehlertext + "\nBitte füllen Sie die Informationen noch aus. Danke.");
         return false;
         }
         InfoFenster();

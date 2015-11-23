@@ -1,4 +1,13 @@
-﻿// Bildwechsel
+﻿
+
+// Neuen Datensatz erstellen über Aside Menü
+newdatabox = document.getElementById("pencil");
+newdatabox.addEventListener('click', function(){
+    InfoFenster();
+});
+
+
+// Bildwechsel
 var images = new Array();
 images[0] = "pictures/startbild01.jpg ";
 images[1] = "pictures/startbild02.jpg ";
@@ -31,7 +40,6 @@ function Bildwechsel(x) {
 
 //Formulareingaben überprüfen
 window.addEventListener("load",initialisiereFunktion,false);
-
 function initialisiereFunktion(){
     submitBtn = document.getElementById("submitbtn");
     submitBtn.addEventListener('click', function(){
@@ -78,10 +86,13 @@ function submitPruefen(){
     if (fehler !="") {
         var fehlertext = "Die folgenden Felder wurden nicht korrekt ausgefüllt:\n\n";
         fehlertext += fehler;
-        alert(fehlertext + "\nBitte füllen Sie die Informationen noch aus. Danke.");
+        /*alert(fehlertext + "\nBitte füllen Sie die Informationen noch aus. Danke.");*/
+        document.getElementById("resultLabel").innerHTML="Bitte alle Felder ausfüllen";
         return false;
         }
-        InfoFenster();
+        document.getElementById("resultLabel").innerHTML="Eingabe gespeichert";
+        setTimeout(closeOverlay(),3000);
+
         }
 
 
@@ -109,6 +120,39 @@ s.addEventListener('change', function(){
     else document.getElementById("subLabel").innerHTML="";
 });
 
+// Prüfen der Eingabe für Date sonst ErrorLabel einblenden
+dateID = document.getElementById("date");
+dateID.addEventListener('change', function(){
+
+    if(document.Formular.Date.value == "" || document.Formular.Date.value.length > 10)
+    {
+        document.getElementById("dateLabel").innerHTML="falsches Datumsformat";
+    }
+    else document.getElementById("dateLabel").innerHTML="";
+});
+
+// Prüfen der Eingabe für Startzeit sonst ErrorLabel einblenden
+startID = document.getElementById("start");
+startID.addEventListener('change', function(){
+
+    if(document.Formular.Start.value == "")
+    {
+        document.getElementById("startLabel").innerHTML="falsche Zeitangabe";
+    }
+    else document.getElementById("startLabel").innerHTML="";
+});
+
+// Prüfen der Eingabe für Startzeit sonst ErrorLabel einblenden
+endID = document.getElementById("end");
+endID.addEventListener('change', function(){
+
+    if(document.Formular.End.value == "")
+    {
+        document.getElementById("endLabel").innerHTML="falsche Zeitangabe";
+    }
+    else document.getElementById("endLabel").innerHTML="";
+});
+
 
 //Navigationsleiste führt durch mit scrollen mit
 window.onscroll = function() {
@@ -131,10 +175,12 @@ function InfoFenster() {
 }
 
 c = document.getElementById('Close');
-c.addEventListener('click', function(){
-    var overlay = document.getElementById('overlay');
-    var specialBox = document.getElementById('Box');
-    overlay.style.display = "none";
-    specialBox.style.display = "none";
-});
+c.addEventListener('click', closeOverlay, false);
+
+    function closeOverlay() {
+        var overlay = document.getElementById('overlay');
+        var specialBox = document.getElementById('Box');
+        overlay.style.display = "none";
+        specialBox.style.display = "none";
+    };
 

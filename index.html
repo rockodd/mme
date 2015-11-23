@@ -15,11 +15,68 @@
   <div id="overlay"></div>
 
 
-  <div id="Box">
-    <br><br><br><br><br><br><br>
-    <p id= "infofenster"> Ihr Datensatz wurde erfolgreich erstellt/geändert!</p>
-    <button id="Close" class="button">Fenster schließen</button>
+    <div id="Box">
+    <div id="headlines">
+      <a id="dataInput"></a>
+      <h2>Datensatz erstellen/ändern</h2>
+    </div>
+
+    <div id="dataInput">
+
+      <form action="" id = "Form01"  name = "Formular">
+        <table class="tinput">
+          <tr>
+            <td>Datum:</td>
+            <td><input id="date" type="date" name="Date"></td>
+          </tr><tr>
+          <td></td>
+          <td><label id="dateLabel" class="errorMsg"></label></td>
+        </tr><tr>
+          <td>Bezeichnung: </td>
+          <td><input id="NameText" type="text" name="Name"></td>
+        </tr><tr>
+          <td></td>
+          <td><label id="bezLabel" class="errorMsg"></label></td>
+        </tr><tr>
+          <td>Start: </td>
+          <td><input id="start" type="time" name="Start"></td>
+        </tr><tr>
+          <td></td>
+          <td><label id = "startLabel" class="errorMsg"></label></td>
+        </tr><tr>
+          <td>Ende: </td>
+          <td><input id="end" type="time" name="End"></td>
+        </tr><tr>
+          <td></td>
+          <td><label id = "endLabel" class="errorMsg"></label></td>
+        </tr><tr>
+          <td>Bemerkung: </td>
+          <td><input id="subtext" type="text" name="Subtext"></td>
+        </tr><tr>
+          <td></td>
+          <td><label id="subLabel" class="errorMsg"></label></td>
+        </tr><tr>
+          <td><button id="closeBox" class="button">Abbrechen</button></td>
+          <td><input id="submitbtn" class="button" type="button" value="Absenden"></td>
+        </tr><tr>
+          <td></td>
+          <td><label id="resultLabel" class="errorMsg"></label></td>
+        </tr>
+
+        </table>
+        <br>
+      </form>
+      <br>
+    </div>
+
   </div>
+
+
+  <!--  <div id="Box">
+      <br><br><br><br><br><br><br>
+      <p id= "infofenster"> Ihr Datensatz wurde erfolgreich erstellt/geändert!</p>
+      <button id="Close" class="button">Fenster schließen</button>
+    </div>-->
 
 
   <div id="container">
@@ -184,53 +241,8 @@
     <h1>Standort</h1>
     </div>
     <div id="googleMap"></div>
-    <div id="headlines">
-    <a id="dataInput"></a>
-    <h1>Datensatz erstellen/ändern</h1>
-    </div>
-    <div id="dataInput">
-      
-      <form action="" id = "Form01"  name = "Formular">
-        <table class="tinput">
-          <tr>
-          <td>Datum:</td>
-          <td><input type="date" name="Date"></td>
-          </tr><tr>
-          <td></td>
-          <td><label id="dateLabel" class="errorMsg"></label></td>
-          </tr><tr>
-          <td>Bezeichnung: </td>
-          <td><input id="NameText" type="text" name="Name"></td>
-          </tr><tr>
-          <td></td>
-          <td><label id="bezLabel" class="errorMsg"></label></td>
-          </tr><tr>
-          <td>Start: </td>
-          <td><input type="time" name="Start"></td>
-          </tr><tr>
-          <td></td>
-          <td><label id = "startLabel" class="errorMsg"></label></td>
-          </tr><tr>
-          <td>Ende: </td>
-          <td><input type="time" name="End"></td>
-          </tr><tr>
-          <td></td>
-          <td><label id = "endLabel" class="errorMsg"></label></td>
-          </tr><tr>
-          <td>Bemerkung: </td>
-          <td><input id="subtext" type="text" name="Subtext"></td>
-          </tr><tr>
-          <td></td>
-          <td><label id="subLabel" class="errorMsg"></label></td>
-          </tr><tr>
-          <td></td>
-          <td><input id="submitbtn" class="button" type="button" value="Absenden"></td>
-        </table>
-        <br>
-      </form>
-      <br>
-    </div>
-    
+
+
     <div id="headlines">
     <a id="stats"</a>
     <h1>Auswertung</h1>
@@ -245,7 +257,7 @@
     <a href="#search"><img src="pictures/search.png" alt="Suche" /></a>
     <a href="#data"><img src="pictures/calendar.png" alt="Tabelle" /></a>
     <a href="#map"><img src="pictures/location-pin.png" alt="Standort" /></a>
-    <a href="#dataInput"><img src="pictures/pencil.png" alt="Editieren" /></a>
+    <a href="#dataInput" id="pencil"><img src="pictures/pencil.png" alt="Editieren" /></a>
     <a href="#stats"><img src="pictures/stats-1.png" alt="Statistiken" /></a>
   
     

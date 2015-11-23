@@ -41,15 +41,16 @@ function initialisiereFunktion(){
 function submitPruefen(){
     var f = document.Formular;
     var fehler = "";
+    var pattName = new RegExp("[A-Za-z]{3}")
 
-    if(document.Formular.Name.value == "" || document.Formular.Name.value.length < 3 )
+    if(document.Formular.Name.value == "" || (!pattName.test(document.Formular.Name.value) ))
     {
         fehler += "-Bezeichnung\n";
         document.Formular.Name.focus();
     
     }
 
-    if(document.Formular.Subtext.value == "" || document.Formular.Subtext.value.length < 3 )
+    if(document.Formular.Subtext.value == "" || (!pattName.test(document.Formular.Subtext.value)) )
     {
         fehler += "-Bemerkung\n";
         document.Formular.Subtext.focus();
@@ -89,9 +90,10 @@ function submitPruefen(){
 // Pr?fen der Eingabe f?r Beschreibung sonst ErrorLabel einblenden
 n = document.getElementById("NameText");
 n.addEventListener('change', function(){
-    if(document.Formular.Name.value == "" || document.Formular.Name.value.length < 3 )
+    var patt = new RegExp("[A-Za-z]{3}");
+    if(document.Formular.Name.value == "" || (!patt.test(document.Formular.Name.value) ))
     {
-        document.getElementById("bezLabel").innerHTML="min. 3 Zeichen";
+        document.getElementById("bezLabel").innerHTML="min. 3 Buchstaben verwenden";
     }
     else document.getElementById("bezLabel").innerHTML="";
 });
@@ -99,9 +101,10 @@ n.addEventListener('change', function(){
 // Pr?fen der Eingabe f?r Bemerkung sonst ErrorLabel einblenden
 s = document.getElementById("subtext");
 s.addEventListener('change', function(){
-    if(document.Formular.Subtext.value == "" || document.Formular.Subtext.value.length < 3 )
+    var patt = new RegExp("[A-Za-z]{3}")
+    if(document.Formular.Subtext.value == "" || (!patt.test(document.Formular.Subtext.value) ))
     {
-        document.getElementById("subLabel").innerHTML="min. 3 Zeichen";
+        document.getElementById("subLabel").innerHTML="min. 3 Buchstaben verwenden";
     }
     else document.getElementById("subLabel").innerHTML="";
 });

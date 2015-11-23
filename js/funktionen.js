@@ -7,7 +7,7 @@ setTimeout("Bildwechsel(0)", 3000);
 function Bildwechsel(x) {
     document.getElementById("Foto01").src = images[x];
     timeoutId = setTimeout(function() {
-        Bildwechsel((x + 1) % images.length).fadeIn();
+        Bildwechsel((x + 1) % images.length)
     }, 3000);
 }
 

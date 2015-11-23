@@ -29,7 +29,7 @@ function Bildwechsel(x) {
 
 
 
-//Formulareingaben überprüfen
+//Formulareingaben ?berpr?fen
 window.addEventListener("load",initialisiereFunktion,false);
 
 function initialisiereFunktion(){
@@ -56,7 +56,7 @@ function submitPruefen(){
     
     }
 
-    if(document.Formular.Date.value == "")
+    if(document.Formular.Date.value == "" || document.Formular.Date.value.length > 10)
     {
         fehler += "-Datum\n";
         document.Formular.Date.focus();
@@ -86,7 +86,7 @@ function submitPruefen(){
 
         
 
-// Prüfen der Eingabe für Beschreibung sonst ErrorLabel einblenden
+// Pr?fen der Eingabe f?r Beschreibung sonst ErrorLabel einblenden
 n = document.getElementById("NameText");
 n.addEventListener('change', function(){
     if(document.Formular.Name.value == "" || document.Formular.Name.value.length < 3 )
@@ -96,7 +96,7 @@ n.addEventListener('change', function(){
     else document.getElementById("bezLabel").innerHTML="";
 });
 
-// Prüfen der Eingabe für Bemerkung sonst ErrorLabel einblenden
+// Pr?fen der Eingabe f?r Bemerkung sonst ErrorLabel einblenden
 s = document.getElementById("subtext");
 s.addEventListener('change', function(){
     if(document.Formular.Subtext.value == "" || document.Formular.Subtext.value.length < 3 )
@@ -107,7 +107,7 @@ s.addEventListener('change', function(){
 });
 
 
-//Navigationsleiste fährt durch mit scrollen mit
+//Navigationsleiste f?hrt durch mit scrollen mit
 window.onscroll = function() {
     var menu = document.getElementById('menu');
     if( document.body.scrollTop+document.documentElement.scrollTop > 30)

@@ -70,15 +70,7 @@ div#Box {
 	background: #FFF;
 	color: #000;
 }
-div#wrapper {
-	position:absolute;
-	top: 0px;
-	left: 0px;
-	padding-left:24px;
-}
 
-
-	
 #filter {
 			margin: 20px;
 			height: 100px;

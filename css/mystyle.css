@@ -99,7 +99,7 @@ table.tfilter{
 
 #container {
 	width: 100%;
-	/*background-image: url(../pictures/hintergrund.png);*/
+	background-image: url(../pictures/hintergrund.png);
 	background-color: #eee;
 	border-radius: 30px
 	

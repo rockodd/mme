@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5bbb34ff-3d8f-4b2c-acb6-6d6713450ba0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Boot1/css/meincss.css" afterPath="$PROJECT_DIR$/Boot1/css/meincss.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Boot1/js/meinjs.js" afterPath="$PROJECT_DIR$/Boot1/js/meinjs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Boot1/offset.html" afterPath="$PROJECT_DIR$/Boot1/offset.html" />
     </list>
     <ignored path="mme.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +27,7 @@
       <file leaf-file-name="offset.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Boot1/offset.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.0">
+            <state vertical-scroll-proportion="-5.423077">
               <caret line="304" column="6" selection-start-line="304" selection-start-column="6" selection-end-line="304" selection-end-column="6" />
               <folding>
                 <element signature="e#2149#2973#0" expanded="false" />
@@ -55,8 +53,8 @@
       <file leaf-file-name="meincss.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Boot1/css/meincss.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.521327">
-              <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="113" column="65" selection-start-line="113" selection-start-column="65" selection-end-line="113" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -523,9 +521,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Boot1/js/meinjs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-44.22222">
+          <caret line="139" column="5" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Boot1/offset.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.0">
+        <state vertical-scroll-proportion="-5.423077">
           <caret line="304" column="6" selection-start-line="304" selection-start-column="6" selection-end-line="304" selection-end-column="6" />
           <folding>
             <element signature="e#2149#2973#0" expanded="false" />
@@ -537,18 +543,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Boot1/js/meinjs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-44.22222">
-          <caret line="139" column="5" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Boot1/css/meincss.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.521327">
-          <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="113" column="65" selection-start-line="113" selection-start-column="65" selection-end-line="113" selection-end-column="65" />
           <folding />
         </state>
       </provider>

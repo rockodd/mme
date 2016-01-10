@@ -107,11 +107,11 @@ div#Box {
  	color: red;
 }
 
-@media only screen and (max-width: 968px) {
+@media only screen and (max-width: 968px) and (min-width: 480px) {
 	#bemerkung, tr td:nth-child(6)			{ display:none; visibility:hidden; }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (min-width: 480px) {
 	#start, tr td:nth-child(3)	{ display:none; visibility:hidden; }
 	#ende, tr td:nth-child(4)	{ display:none; visibility:hidden; }
 	/* #gesamt, tr td:nth-child(5)			{ display:none; visibility:hidden; } */

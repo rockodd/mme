@@ -19,10 +19,14 @@ window.addEventListener('load',initialize);
 
 
 // Neuen Datensatz erstellen über Aside Menü
-newdatabox = document.getElementById("pencil");
-newdatabox.addEventListener('click', function(){
-    InfoFenster();
-});
+
+var pencils = document.getElementsByClassName("pencil");
+for (var i = 0; i < pencils.length ; i++) {
+    pencils[i].addEventListener("click",
+        function () {
+            InfoFenster();
+        });
+}
 
 // Infofenster öffnen
 function InfoFenster() {
@@ -127,7 +131,7 @@ dateID.addEventListener('change', function(){
 });
 
 // Prüfen der Eingabe für Startzeit sonst ErrorLabel einblenden
-startID = document.getElementById("start");
+startID = document.getElementById("begin");
 startID.addEventListener('change', function(){
 
     if(document.Formular.Start.value == "")

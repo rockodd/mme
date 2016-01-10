@@ -56,9 +56,9 @@ a {text-decoration: none;}
 
 		#googleMap {
 		
-		width:500px;
+		width:auto;
 		height:380px;
-		margin: 80px;
+		margin: 10px;
 		margin-left: auto;
 		margin-right: auto;
 		}
@@ -174,3 +174,4 @@ only screen and (max-width: 480px),
 	td:nth-of-type(7):before { content: "Ort"; }
 	td:nth-of-type(8):before { content: ""; }
 }
+

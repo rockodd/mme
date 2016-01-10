@@ -13,34 +13,63 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
 <link href="css/meincss.css" rel="stylesheet" media="screen">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
-  <body id="home">
-  	<div class="container"> 
-  		<section class="row">
+  <body>
+
+
+  <div class="navbar navbar-inverse" role="navigation">
+  	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand" href="#">Student Timemanager</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#suche"><span class="glyphicon glyphicon-search"></span> Suche</a></li>
+                <li><a href="#workload"><span class="glyphicon glyphicon-calendar"></span> Workload</a></li>
+                <li><a href="#standort"><span class="glyphicon glyphicon-map-marker"></span> Standort</a></li>
+                <li><a href="#auswertung"><span class="glyphicon glyphicon-education"></span> Auswertung</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-pencil"></span> Daten <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-header"><a class="pencil">neu</a></li>
+                    <li class="dropdown-header"><a class="pencil">ändern</a></li>
+
+                </ul>
+                </li>
+            </ul>
+            </div>
+        </div>
+      </div>
+
+  		<!--<div class="row">
   			<div class= " col col-md-12">
   				<header class="clearfix">
-  				<section class="navbar navbar-inverse" id="leiste">
+
   					<ul class="nav navbar-nav" id="navigation">
-  						<li class= "active"><a href="#carousel-example-generic"><span class="glyphicon glyphicon-home"> </span></a></li>
+
+  						<li><a href="#carousel-example-generic"><span class="glyphicon glyphicon-home"> </span></a></li>
   						<li><a href="#suche"><span class="glyphicon glyphicon-search"></span> Suche</a></li>
   						<li><a href="#workload"><span class="glyphicon glyphicon-calendar"></span> Workload</a></li>
   						<li><a href="#standort"><span class="glyphicon glyphicon-map-marker"></span> Standort</a></li>
   						<li><a href="#auswertung"><span class="glyphicon glyphicon-education"></span> Auswertung</a></li>
-  						<li><a id="pencil"><span class="glyphicon glyphicon-pencil"></span> Datensatz</a></li>
-  						
+  						<li><a id="pencil" class="pencil"><span class="glyphicon glyphicon-pencil"></span> Datensatz</a></li>
+
   					</ul>
-  		
-				</section>
+
+				</div>
 				</header>
 		   </div>	
-		</section>
+		</div>-->
 
+
+
+<div class="container">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -119,7 +148,7 @@
           <td><label id="bezLabel" class="errorMsg"></label></td>
         </tr><tr>
           <td>Start: </td>
-          <td><input id="start" type="time" name="Start"></td>
+          <td><input id="begin" type="time" name="Start"></td>
         </tr><tr>
           <td></td>
           <td><label id = "startLabel" class="errorMsg"></label></td>
@@ -148,6 +177,8 @@
       </form>	
      <!-- </div> -->
       </div>
+
+
 <h1 id="workload">Workload</h1>
 <div class="table-responsive">
 	<table class="table table-hover" id="tabelle">
@@ -172,7 +203,7 @@
           <td>14:00</td>
           <td>Brainstorming</td>
           <td><a href="#standort">Mensa</a></td>
-          <td><a href="#dataInput" id="pencil1">Edit</a></td>
+          <td><a href="#dataInput" class="pencil">Edit</a></td>
         </tr>
   		<tr>
           <td>12.10.2015</td>
@@ -182,7 +213,7 @@
           <td >14:30</td>
           <td >Papier-Entwurf</td>
           <td ><a href="#map">Mensa</a></td>
-          <td ><a href="#dataInput">Edit</a></td>
+          <td ><a href="#dataInput"  class="pencil">Edit</a></td>
         </tr>
         <tr>
           <td>18.10.2015</td>
@@ -192,7 +223,7 @@
           <td >07:00</td>
           <td >erster HTML-Entwurf</td>
           <td ><a href="#map">Mensa</a></td>
-          <td ><a href="#dataInput">Edit</a></td>
+          <td ><a href="#dataInput" class="pencil">Edit</a></td>
         </tr>
         <tr>
           <td>19.10.2015</td>
@@ -202,7 +233,7 @@
           <td >07:00</td>
           <td >erster HTML-Entwurf</td>
           <td ><a href="#map">Mensa</a></td>
-          <td ><a href="#dataInput">Edit</a></td>
+          <td ><a href="#dataInput" class="pencil">Edit</a></td>
         </tr>
                 <tr>
           <td>20.10.2015</td>
@@ -212,7 +243,7 @@
           <td >07:00</td>
           <td >erster HTML-Entwurf</td>
           <td ><a href="#map">Mensa</a></td>
-          <td ><a href="#dataInput">Edit</a></td>
+          <td ><a href="#dataInput" class="pencil">Edit</a></td>
         </tr>
         <tr>
           <td>21.10.2015</td>
@@ -222,7 +253,7 @@
           <td>07:00</td>
           <td >erster HTML-Entwurf</td>
           <td ><a href="#map">Mensa</a></td>
-          <td ><a href="#dataInput">Edit</a></td>
+          <td ><a href="#dataInput" class="pencil">Edit</a></td>
         </tr>
         <tr>
           <td>22.10.2015</td>
@@ -232,7 +263,7 @@
           <td >14:30</td>
           <td >Papier-Entwurf</td>
           <td ><a href="#map">Mensa</a></td>
-          <td ><a href="#dataInput">Edit</a></td>
+          <td ><a href="#dataInput" class="pencil">Edit</a></td>
         </tr>
         <tr>
           <td>23.10.2015</td>
@@ -242,7 +273,7 @@
           <td >07:00</td>
           <td >erster HTML-Entwurf</td>
           <td ><a href="#map">Mensa</a></td>
-          <td ><a href="#dataInput">Edit</a></td>
+          <td ><a href="#dataInput" class="pencil">Edit</a></td>
         </tr>
         <tr>
           <td>24.10.2015</td>
@@ -252,11 +283,13 @@
           <td >14:30</td>
           <td >Papier-Entwurf</td>
           <td ><a href="#map">Mensa</a></td>
-          <td ><a href="#dataInput">Edit</a></td>
+          <td ><a href="#dataInput" class="pencil">Edit</a></td>
         </tr>
         </tbody>
 </table>
     </div>
+
+
     <h1 id="standort">Standort</h1>
     <div id="googleMap">
     	
@@ -268,14 +301,16 @@
     <img src="img/Pie_Chart.PNG" class="img-responsive">
     </div>
     </div>
-	</div><!-- ende container -->
-	
+
+</div>
+
 	<footer>
     
       * Diese Webseite wurde von Robert Ullmann und Marlon Mattern gestaltet *
       
       Multimedia-Engeneering I
-      
+
+
     
 
   </footer>

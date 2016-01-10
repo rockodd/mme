@@ -22,7 +22,7 @@ h1 {
 
 a {text-decoration: none;}
 
-		#tabelle{
+		/*#tabelle{
 			padding: 3%;
 			text-align: left;
 			
@@ -34,8 +34,8 @@ a {text-decoration: none;}
 			
 	
 			padding: 10px;
-			/*border: solid 1px #707070;*/
-			/*box-shadow: 0 0 5px 1px #969696;*/
+			/!*border: solid 1px #707070;*!/
+			/!*box-shadow: 0 0 5px 1px #969696;*!/
 			border-collapse: collapse;
 			
 			border-spacing: 0px; 
@@ -48,6 +48,8 @@ a {text-decoration: none;}
 			margin-left: auto;
 			margin-right: auto;
 		}
+
+		*/
 #stats{
 	text-align: center;
 }
@@ -105,21 +107,70 @@ div#Box {
  	color: red;
 }
 
+@media only screen and (max-width: 968px) {
+	#bemerkung, tr td:nth-child(6)			{ display:none; visibility:hidden; }
+}
+
 @media only screen and (max-width: 768px) {
-	#ort, tr td:nth-child(7)		{ display:none; visibility:hidden; }
+	#start, tr td:nth-child(3)	{ display:none; visibility:hidden; }
+	#ende, tr td:nth-child(4)	{ display:none; visibility:hidden; }
+	/* #gesamt, tr td:nth-child(5)			{ display:none; visibility:hidden; } */
+	#bemerkung, tr td:nth-child(6)			{ display:none; visibility:hidden; }
+	/*#ort, tr td:nth-child(7)		{ display:none; visibility:hidden; } */
 }
 
-@media only screen and (max-width: 420px) {
-	#ende, tr td:nth-child(4)	{ display:none; visibility:hidden; }
-	#gesamt, tr td:nth-child(5)			{ display:none; visibility:hidden; }
-	#bemerkung, tr td:nth-child(6)			{ display:none; visibility:hidden; }
-	#ort, tr td:nth-child(7)		{ display:none; visibility:hidden; }
-}
 
-@media only screen and (max-width: 320px) {
-	#ende, tr td:nth-child(4)	{ display:none; visibility:hidden; }
-	#gesamt, tr td:nth-child(5)			{ display:none; visibility:hidden; }
-	#bemerkung, tr td:nth-child(6)			{ display:none; visibility:hidden; }
-	#ort, tr td:nth-child(7)			{ display:none; visibility:hidden; }
-	
+
+/*
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media
+only screen and (max-width: 480px),
+(min-device-width: 486px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr { border: 1px solid #ccc; }
+
+	td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+
+	td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Datum"; }
+	td:nth-of-type(2):before { content: "Bezeichnung"; }
+	td:nth-of-type(3):before { content: "Start"; }
+	td:nth-of-type(4):before { content: "Ende"; }
+	td:nth-of-type(5):before { content: "Gesamt"; }
+	td:nth-of-type(6):before { content: "Bemerkung"; }
+	td:nth-of-type(7):before { content: "Ort"; }
+	td:nth-of-type(8):before { content: ""; }
 }

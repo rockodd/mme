@@ -2,15 +2,16 @@
 <html lang="de">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- The above 2 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Student Timemanager</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
-    <link href="css/meincss.css" rel="stylesheet" media="screen">
+<link href="css/meincss.css" rel="stylesheet" media="screen">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,7 +32,7 @@
   						<li><a href="#workload"><span class="glyphicon glyphicon-calendar"></span></a></li>
   						<li><a href="#standort"><span class="glyphicon glyphicon-map-marker"></span></a></li>
   						<li><a href="#auswertung"><span class="glyphicon glyphicon-education"></span></a></li>
-  						<li><a href="#dataInput" id="pencil"><span class="glyphicon glyphicon-pencil"></span> </a></li>
+  						<li><a id="pencil"><span class="glyphicon glyphicon-pencil"></span> </a></li>
   						
   					</ul>
   		
@@ -150,106 +151,110 @@
 <h1 id="workload">Workload</h1>
 <div class="table-responsive">
 	<table class="table table-hover" id="tabelle">
+        <thead>
 		<tr>
           <th id="datum">Datum</th>
           <th id="bezeichnung">Bezeichnung</th>
           <th id="start">Start</th>
           <th id="ende">Ende</th>
-          <th id="gesamt" class="hidden-xs">Gesamt</th>
-          <th id="bemerkung" class="hidden-xs">Bemerkung</th>
-          <th id="ort" class="hidden-xs">Ort</th>
-          <th></th>
+          <th id="gesamt">Gesamt</th>
+          <th id="bemerkung">Bemerkung</th>
+          <th id="ort">Ort</th>
+          <th id="edit" ></th>
        </tr>
+        </thead>
+        <tbody>
        <tr>
           <td>05.10.2015</td>
           <td>FPA-Projekt</td>
           <td>07:00</td>
           <td>21:00</td>
-          <td class="hidden-xs">14:00</td>
-          <td class="hidden-xs">Brainstorming</td>
-          <td class="hidden-xs"><a href="#standort">Mensa</a></td>
-          <td class="hidden-xs"><a href="#dataInput" id="pencil1">Edit</a></td>
+          <td>14:00</td>
+          <td>Brainstorming</td>
+          <td><a href="#standort">Mensa</a></td>
+          <td><a href="#dataInput" id="pencil1">Edit</a></td>
         </tr>
   		<tr>
           <td>12.10.2015</td>
           <td>MME-Projekt</td>
           <td>06:00</td>
           <td>20:30</td>
-          <td class="hidden-xs">14:30</td>
-          <td class="hidden-xs">Papier-Entwurf</td>
-          <td class="hidden-xs"><a href="#map">Mensa</a></td>
-          <td class="hidden-xs"><a href="#dataInput">Edit</a></td>
+          <td >14:30</td>
+          <td >Papier-Entwurf</td>
+          <td ><a href="#map">Mensa</a></td>
+          <td ><a href="#dataInput">Edit</a></td>
         </tr>
         <tr>
           <td>18.10.2015</td>
           <td>MME-Projekt</td>
           <td>10:00</td>
           <td>17:00</td>
-          <td class="hidden-xs">07:00</td>
-          <td class="hidden-xs">erster HTML-Entwurf</td>
-          <td class="hidden-xs"><a href="#map">Mensa</a></td>
-          <td class="hidden-xs"><a href="#dataInput">Edit</a></td>
+          <td >07:00</td>
+          <td >erster HTML-Entwurf</td>
+          <td ><a href="#map">Mensa</a></td>
+          <td ><a href="#dataInput">Edit</a></td>
         </tr>
         <tr>
           <td>19.10.2015</td>
           <td>SE-Projekt</td>
           <td>10:00</td>
           <td>17:00</td>
-          <td class="hidden-xs">07:00</td>
-          <td class="hidden-xs">erster HTML-Entwurf</td>
-          <td class="hidden-xs"><a href="#map">Mensa</a></td>
-          <td class="hidden-xs"><a href="#dataInput">Edit</a></td>
+          <td >07:00</td>
+          <td >erster HTML-Entwurf</td>
+          <td ><a href="#map">Mensa</a></td>
+          <td ><a href="#dataInput">Edit</a></td>
         </tr>
                 <tr>
           <td>20.10.2015</td>
           <td>MME-Projekt</td>
           <td>10:00</td>
           <td>17:00</td>
-          <td class="hidden-xs">07:00</td>
-          <td class="hidden-xs">erster HTML-Entwurf</td>
-          <td class="hidden-xs"><a href="#map">Mensa</a></td>
-          <td class="hidden-xs"><a href="#dataInput">Edit</a></td>
+          <td >07:00</td>
+          <td >erster HTML-Entwurf</td>
+          <td ><a href="#map">Mensa</a></td>
+          <td ><a href="#dataInput">Edit</a></td>
         </tr>
         <tr>
           <td>21.10.2015</td>
           <td>MME-Projekt</td>
           <td>10:00</td>
           <td>17:00</td>
-          <td class="hidden-xs">07:00</td>
-          <td class="hidden-xs">erster HTML-Entwurf</td>
-          <td class="hidden-xs"><a href="#map">Mensa</a></td>
-          <td class="hidden-xs"><a href="#dataInput">Edit</a></td>
+          <td>07:00</td>
+          <td >erster HTML-Entwurf</td>
+          <td ><a href="#map">Mensa</a></td>
+          <td ><a href="#dataInput">Edit</a></td>
         </tr>
         <tr>
           <td>22.10.2015</td>
           <td>SE-Projekt</td>
           <td>06:00</td>
           <td>20:30</td>
-          <td class="hidden-xs">14:30</td>
-          <td class="hidden-xs">Papier-Entwurf</td>
-          <td class="hidden-xs"><a href="#map">Mensa</a></td>
-          <td class="hidden-xs"><a href="#dataInput">Edit</a></td>
+          <td >14:30</td>
+          <td >Papier-Entwurf</td>
+          <td ><a href="#map">Mensa</a></td>
+          <td ><a href="#dataInput">Edit</a></td>
         </tr>
         <tr>
           <td>23.10.2015</td>
           <td>MME-Projekt</td>
           <td>10:00</td>
           <td>17:00</td>
-          <td class="hidden-xs">07:00</td>
-          <td class="hidden-xs">erster HTML-Entwurf</td>
-          <td class="hidden-xs"><a href="#map">Mensa</a></td>
-          <td class="hidden-xs"><a href="#dataInput">Edit</a></td>
+          <td >07:00</td>
+          <td >erster HTML-Entwurf</td>
+          <td ><a href="#map">Mensa</a></td>
+          <td ><a href="#dataInput">Edit</a></td>
         </tr>
         <tr>
           <td>24.10.2015</td>
           <td>MME-Projekt</td>
           <td>06:00</td>
           <td>20:30</td>
-          <td class="hidden-xs">14:30</td>
-          <td class="hidden-xs">Papier-Entwurf</td>
-          <td class="hidden-xs"><a href="#map">Mensa</a></td>
-          <td class="hidden-xs"><a href="#dataInput">Edit</a></td>
+          <td >14:30</td>
+          <td >Papier-Entwurf</td>
+          <td ><a href="#map">Mensa</a></td>
+          <td ><a href="#dataInput">Edit</a></td>
         </tr>
+        </tbody>
 </table>
     </div>
     <h1 id="standort">Standort</h1>
@@ -276,7 +281,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     
-    <script src="//code.jquery.com/jquery.js"></script>
+    <!--<script src="//code.jquery.com/jquery.js"></script>-->
     <script src="js/bootstrap.min.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js"></script>
     <script src= "js/meinjs.js"></script>

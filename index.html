@@ -5,6 +5,21 @@
     <meta name="author" content="Robert">
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
+
+    <script type="text/javascript" language="javascript" src="Boot1/js/jquery.js"></script>
+    <script type="text/javascript" language="javascript" src="Boot1/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" language="javascript" class="init">
+
+      $(document).ready(function() {
+        $('#example').dataTable( {
+          "aProcessing": true,
+          "aServerSide": true,
+          "ajax": "server-response.php",
+        } );
+      } );
+
+    </script>
+
     <title>Student Timemanager</title>
     
   </head>
@@ -132,7 +147,7 @@
     </div>
       
     <content>
-      <table class="tdata">
+      <table id="example" class="tdata">
         <tr>
           <th>Datum</th>
           <th>Bezeichnung</th>
@@ -142,97 +157,6 @@
           <th>Bemerkung</th>
           <th>Ort</th>
           <th></th>
-        </tr>
-        <tr>
-          <td>05.10.2015</td>
-          <td>FPA-Projekt</td>
-          <td>07:00</td>
-          <td>21:00</td>
-          <td>14:00</td>
-          <td>Brainstorming</td>
-          <td><a href="#map">Mensa</a></td>
-          <td><a href="#dataInput">Edit</a></td>
-        </tr>
-        
-        <tr>
-          <td>12.10.2015</td>
-          <td>MME-Projekt</td>
-          <td>06:00</td>
-          <td>20:30</td>
-          <td>14:30</td>
-          <td>Papier-Entwurf</td>
-          <td><a href="#map">Mensa</a></td>
-          <td><a href="#dataInput">Edit</a></td>
-        </tr>
-        <tr>
-          <td>18.10.2015</td>
-          <td>MME-Projekt</td>
-          <td>10:00</td>
-          <td>17:00</td>
-          <td>07:00</td>
-          <td>erster HTML-Entwurf</td>
-          <td><a href="#map">Mensa</a></td>
-          <td><a href="#dataInput">Edit</a></td>
-        </tr>
-        <tr>
-          <td>19.10.2015</td>
-          <td>SE-Projekt</td>
-          <td>10:00</td>
-          <td>17:00</td>
-          <td>07:00</td>
-          <td>erster HTML-Entwurf</td>
-          <td><a href="#map">Mensa</a></td>
-          <td><a href="#dataInput">Edit</a></td>
-        </tr>
-                <tr>
-          <td>20.10.2015</td>
-          <td>MME-Projekt</td>
-          <td>10:00</td>
-          <td>17:00</td>
-          <td>07:00</td>
-          <td>erster HTML-Entwurf</td>
-          <td><a href="#map">Mensa</a></td>
-          <td><a href="#dataInput">Edit</a></td>
-        </tr>
-        <tr>
-          <td>21.10.2015</td>
-          <td>MME-Projekt</td>
-          <td>10:00</td>
-          <td>17:00</td>
-          <td>07:00</td>
-          <td>erster HTML-Entwurf</td>
-          <td><a href="#map">Mensa</a></td>
-          <td><a href="#dataInput">Edit</a></td>
-        </tr>
-        <tr>
-          <td>22.10.2015</td>
-          <td>SE-Projekt</td>
-          <td>06:00</td>
-          <td>20:30</td>
-          <td>14:30</td>
-          <td>Papier-Entwurf</td>
-          <td><a href="#map">Mensa</a></td>
-          <td><a href="#dataInput">Edit</a></td>
-        </tr>
-        <tr>
-          <td>23.10.2015</td>
-          <td>MME-Projekt</td>
-          <td>10:00</td>
-          <td>17:00</td>
-          <td>07:00</td>
-          <td>erster HTML-Entwurf</td>
-          <td><a href="#map">Mensa</a></td>
-          <td><a href="#dataInput">Edit</a></td>
-        </tr>
-        <tr>
-          <td>24.10.2015</td>
-          <td>MME-Projekt</td>
-          <td>06:00</td>
-          <td>20:30</td>
-          <td>14:30</td>
-          <td>Papier-Entwurf</td>
-          <td><a href="#map">Mensa</a></td>
-          </td><td><a href="#dataInput">Edit</a></td>
         </tr>
       </table>
     </content>

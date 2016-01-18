@@ -15,7 +15,7 @@
 $aColumns = array('Datum', 'Bezeichnung', 'Start', 'Ende', 'Gesamt', 'Bemerkung', 'Ort');
 
 /* Indexed column (used for fast and accurate table cardinality) */
-$sIndexColumn = "id";
+ $sIndexColumn = "id";
 
 /* DB table to use */
 $sTable = "workload";

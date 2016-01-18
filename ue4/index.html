@@ -17,15 +17,33 @@
  <!-- jquery -->
  <script type="text/javascript" language="javascript" src="js/jquery.js"></script>
  <script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
+ <script type="text/javascript" language="javascript" src="js/date-de.js"></script>
  <script type="text/javascript" language="javascript" class="init">
+
+  var editor; // use a global for the submit and return data rendering in the examples
+
 
   $(document).ready(function() {
    $('#example').dataTable( {
+
+
     "aProcessing": true,
     "aServerSide": true,
+    "searching": false,
+    "ordering": true,
+    "order": [[ 3, "desc" ]],
+    "info":     false,
     "ajax": "server-response.php",
+
+    columnDefs: [
+     { type: 'de_datetime', targets: 3 },
+     { type: 'de_date', targets: 0 }
+    ]
+
+
    } );
   } );
+
 
  </script>
 
@@ -34,11 +52,6 @@
 </head>
 
 <body class="dt-example">
-
-
-
-<body>
-
 <div class="navbar navbar-inverse" role="navigation">
  <div class="container">
   <div class="navbar-header">
@@ -211,12 +224,9 @@
   <th id="gesamt">Gesamt</th>
   <th id="bemerkung">Bemerkung</th>
   <th id="ort">Ort</th>
-  <th id="edit" ></th>
  </tr>
  </thead>
- <tbody>
 
- </tbody>
 </table>
 
 

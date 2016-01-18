@@ -4,8 +4,6 @@
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
     <!-- The above 2 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Student Timemanager</title>
 
@@ -13,26 +11,11 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
-
-      <!-- jquery -->
-      <script type="text/javascript" language="javascript" src="js/jquery.js"></script>
-      <script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
-      <script type="text/javascript" language="javascript" class="init">
-
-          $(document).ready(function() {
-              $('#example').dataTable( {
-                  "aProcessing": true,
-                  "aServerSide": true,
-                  "ajax": "server-response.php",
-              } );
-          } );
-
-      </script>
-
-<!--<link href="css/meincss.css" rel="stylesheet" media="screen">-->
+<link href="css/meincss.css" rel="stylesheet" media="screen">
 
   </head>
   <body>
+
 
   <div class="navbar navbar-inverse" role="navigation">
   	<div class="container">
@@ -198,7 +181,7 @@
 
 <h1 id="workload">Workload</h1>
 <div class="table-responsive">
-	<table class="table table-hover" id="tabelle"  id="example">
+	<table class="table table-hover" id="tabelle">
         <thead>
 		<tr>
           <th id="datum">Datum</th>
@@ -212,10 +195,98 @@
        </tr>
         </thead>
         <tbody>
-
+       <tr>
+          <td>05.10.2015</td>
+          <td>FPA-Projekt</td>
+          <td>07:00</td>
+          <td>21:00</td>
+          <td>14:00</td>
+          <td>Brainstorming</td>
+          <td><a href="#standort">Mensa</a></td>
+          <td><a href="#dataInput" class="pencil">Edit</a></td>
+        </tr>
+  		<tr>
+          <td>12.10.2015</td>
+          <td>MME-Projekt</td>
+          <td>06:00</td>
+          <td>20:30</td>
+          <td >14:30</td>
+          <td >Papier-Entwurf</td>
+          <td ><a href="#map">Mensa</a></td>
+          <td ><a href="#dataInput"  class="pencil">Edit</a></td>
+        </tr>
+        <tr>
+          <td>18.10.2015</td>
+          <td>MME-Projekt</td>
+          <td>10:00</td>
+          <td>17:00</td>
+          <td >07:00</td>
+          <td >erster HTML-Entwurf</td>
+          <td ><a href="#map">Mensa</a></td>
+          <td ><a href="#dataInput" class="pencil">Edit</a></td>
+        </tr>
+        <tr>
+          <td>19.10.2015</td>
+          <td>SE-Projekt</td>
+          <td>10:00</td>
+          <td>17:00</td>
+          <td >07:00</td>
+          <td >erster HTML-Entwurf</td>
+          <td ><a href="#map">Mensa</a></td>
+          <td ><a href="#dataInput" class="pencil">Edit</a></td>
+        </tr>
+                <tr>
+          <td>20.10.2015</td>
+          <td>MME-Projekt</td>
+          <td>10:00</td>
+          <td>17:00</td>
+          <td >07:00</td>
+          <td >erster HTML-Entwurf</td>
+          <td ><a href="#map">Mensa</a></td>
+          <td ><a href="#dataInput" class="pencil">Edit</a></td>
+        </tr>
+        <tr>
+          <td>21.10.2015</td>
+          <td>MME-Projekt</td>
+          <td>10:00</td>
+          <td>17:00</td>
+          <td>07:00</td>
+          <td >erster HTML-Entwurf</td>
+          <td ><a href="#map">Mensa</a></td>
+          <td ><a href="#dataInput" class="pencil">Edit</a></td>
+        </tr>
+        <tr>
+          <td>22.10.2015</td>
+          <td>SE-Projekt</td>
+          <td>06:00</td>
+          <td>20:30</td>
+          <td >14:30</td>
+          <td >Papier-Entwurf</td>
+          <td ><a href="#map">Mensa</a></td>
+          <td ><a href="#dataInput" class="pencil">Edit</a></td>
+        </tr>
+        <tr>
+          <td>23.10.2015</td>
+          <td>MME-Projekt</td>
+          <td>10:00</td>
+          <td>17:00</td>
+          <td >07:00</td>
+          <td >erster HTML-Entwurf</td>
+          <td ><a href="#map">Mensa</a></td>
+          <td ><a href="#dataInput" class="pencil">Edit</a></td>
+        </tr>
+        <tr>
+          <td>24.10.2015</td>
+          <td>MME-Projekt</td>
+          <td>06:00</td>
+          <td>20:30</td>
+          <td >14:30</td>
+          <td >Papier-Entwurf</td>
+          <td ><a href="#map">Mensa</a></td>
+          <td ><a href="#dataInput" class="pencil">Edit</a></td>
+        </tr>
         </tbody>
 </table>
-
     </div>
 
 
@@ -243,14 +314,14 @@
     
 
   </footer>
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
 
-  <!--<script src="//code.jquery.com/jquery.js"></script>-->
-  <script src="js/bootstrap.min.js"></script>
-  <script src="http://maps.googleapis.com/maps/api/js"></script>
-  <script src= "js/meinjs.js"></script>
+    <!--<script src="//code.jquery.com/jquery.js"></script>-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src= "js/meinjs.js"></script>
     
     
   </body>

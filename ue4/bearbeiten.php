@@ -18,22 +18,22 @@
 			tr><th>ID:</th><th>Datum:</th><th>Bezeichnung:</th><th>Start:</th><th>Ende:</th><th>Gesamt:</th><th>Bezeichnung:</th><th>Ort:</th></tr>
 			<?php
 				require_once "db_daten.php"; 																						// Verbindungsdaten zur Datenbank
-				$sql_abfrage = $mysqli->query("Select id, Datum, Bezeichnung, Start, Ende, Gesamt,Bemerkung, Ort kommentar FROM workload;"); 							// SQL-Abfrage
+				$sql_abfrage = $mysqli->query("Select id, Datum, Bezeichnung, Start, Ende, Gesamt,Bemerkung, Ort FROM workload;"); 							// SQL-Abfrage
 						while($datensatz = $sql_abfrage->fetch_array()) {
 							$id			= htmlspecialchars($datensatz['id']);
 							$Datum		= htmlspecialchars($datensatz['Datum']);
 							$Bezeichnung		= htmlspecialchars($datensatz['Bezeichnung']);
 							$Start		= htmlspecialchars($datensatz['Start']);
-							$kommentar	= htmlspecialchars($datensatz['kommentar']);
-							$kommentar	= htmlspecialchars($datensatz['kommentar']);
-							$kommentar	= htmlspecialchars($datensatz['kommentar']);
-							$kommentar	= htmlspecialchars($datensatz['kommentar']);
-							$kommentar	= htmlspecialchars($datensatz['kommentar']);
+							$Ende	= htmlspecialchars($datensatz['Ende']);
+							$Gesamt	= htmlspecialchars($datensatz['Gesamt']);
+							$Bezeichnung	= htmlspecialchars($datensatz['Bezeichnung']);
+							$Ort	= htmlspecialchars($datensatz['Ort']);
+							
 							if($_GET["id"] == $id) {
 								echo "<tr>"
 									   ?> <input name="id" type='hidden' value="<?php echo $id;		?>")> <?php echo 
-									   "<td>" ?> <input name="etappe" type='text' value="<?php echo $etappe;		?>")> <?php echo "</td>"
-//									 . "<td>" ?> <input name="region" type='text' value="<?php echo $region;		?>")> <?php echo "</td>"
+									   "<td>" ?> <input name="etappe" type='text' value="<?php echo $Datum;		?>")> <?php echo "</td>"
+//									 . "<td>" ?> <input name="region" type='text' value="<?php echo $Bezeichnung;		?>")> <?php echo "</td>"
 									 . "<td>" ?> .	<select name="region">
 														<?php
 															$nordinsel	= array("Auckland", "Northland", "Coromandel Peninsula", "Waikato und King Country", "Bay Of Plenty", "East Coast", "Zentrale Hochebene",
@@ -56,18 +56,24 @@
 															echo "</optgroup>";
 														?>
 													</select> <?php echo "</td>"
-									 . "<td>" ?> <input name="datum" type='text' value="<?php echo $datum;		?>")> <?php echo "</td>"
-									 . "<td>" ?> <input name="kommentar" type='text' value="<?php echo $kommentar;	?>")> <?php echo "</td>"
+									 . "<td>" ?> <input name="datum" type='text' value="<?php echo $Start;		?>")> <?php echo "</td>"
+									 . "<td>" ?> <input name="kommentar" type='text' value="<?php echo $Ende;	?>")> <?php echo "</td>"
+									 . "<td>" ?> <input name="kommentar" type='text' value="<?php echo $Gesamt;	?>")> <?php echo "</td>"
+									 . "<td>" ?> <input name="kommentar" type='text' value="<?php echo $Bezeichnung;	?>")> <?php echo "</td>"
+									 . "<td>" ?> <input name="kommentar" type='text' value="<?php echo $Ort;	?>")> <?php echo "</td>"
 									   ?> <input name="action" type='hidden' value="edit"> <?php echo 
 									  "<td>" . "<input type='submit' value='Okay'>" . "</td>"
 									 . "<td>" . "<a href='route.php'>Abbrechen</a>"	. "</td>"
 									 . "</tr>\n";
 							} else {
 								echo "<tr>"
-									 . "<td>" . $etappe		. "</td>"
-									 . "<td>" . $region		. "</td>"
-									 . "<td>" . $datum		. "</td>"
-									 . "<td>" . $kommentar	. "</td>"
+									 . "<td>" . $Datum		. "</td>"
+									 . "<td>" . $Bemerkung		. "</td>"
+									 . "<td>" . $Start		. "</td>"
+									 . "<td>" . $Ende	. "</td>"
+									 . "<td>" . $Gesamt	. "</td>"
+									 . "<td>" . $Bezeichnung	. "</td>"
+									 . "<td>" . $Ort	. "</td>"
 									 . "<td>" . "<a href='tmp_bearbeiten.php?id="	. (int)$id . "&action=edit"		. "'>Bearbeiten</a>"	. "</td>"
 									 . "<td>" . "<a href='tmp_delete.php?id="		. (int)$id . "&action=delete"	. "'>Löschen</a>"	. "</td>"
 									 . "</tr>\n";

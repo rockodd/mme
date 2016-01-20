@@ -17,7 +17,6 @@
  <!-- jquery -->
  <script type="text/javascript" language="javascript" src="js/jquery.js"></script>
  <script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
- 
  <script type="text/javascript" language="javascript" class="init">
 
   var editor; // use a global for the submit and return data rendering in the examples
@@ -29,18 +28,10 @@
 
     "aProcessing": true,
     "aServerSide": true,
-    "searching": true,
     "ordering": true,
     "order": [[ 3, "desc" ]],
     "info":     false,
     "ajax": "server-response.php",
-
-    columnDefs: [
-     { type: 'de_datetime', targets: 3 },
-     { type: 'de_date', targets: 0 }
-    ]
-
-
    } );
   } );
 

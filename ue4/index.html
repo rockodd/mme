@@ -158,7 +158,7 @@
  <div id="Box">
   <h1 id="dataInput">Datensatz erstellen/ändern</h1>
   <!--<div class="col col-md-8 col-md-offset-4"> -->
-  <form action="" id = "Form01" class = "Form01" name = "Formular">
+  <form action="add_data.php" id = "Form01" class = "Form01" name = "Formular" method="POST">
    <table class="tinput">
     <tr>
      <td>Datum:</td>
@@ -188,11 +188,14 @@
     <td>Bemerkung: </td>
     <td><input id="subtext" type="text" name="Subtext"></td>
    </tr><tr>
+    <td>Ort: </td>
+    <td><input id="location" type="text" name="Location"></td>
+   </tr><tr>
     <td></td>
     <td><label id="subLabel" class="errorMsg"></label></td>
    </tr><tr>
     <td><button id="closeBox" class="btn btn-warning" data-toggle="tooltip" data-placement="bottom" title="Zurück zur Startseite">Abbrechen</button></td>
-    <td><input id="submitbtn" class="btn btn-success" type="button" value="Absenden"></td>
+    <td><input id="submitbtn" class="btn btn-success" type="submit" value="Absenden"></td>
    </tr><tr>
     <td></td>
     <td><label id="resultLabel" class="errorMsg"></label></td>

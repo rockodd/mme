@@ -21,40 +21,13 @@ $value6 = $_POST['Location'];
 
 
 
-/*
-	if(isset($_GET['action'])) $action = htmlspecialchars($_GET['action']);
-	if(isset($_POST['action'])) {
-        $action										= htmlspecialchars($_POST['action']);
-        if(isset($_POST['id']))			$id			= htmlspecialchars($_POST['id']);
-        if(isset($_POST['etappe']))		$etappe		= htmlspecialchars($_POST['etappe']);
-        if(isset($_POST['region']))		$region		= htmlspecialchars($_POST['region']);
-        if(isset($_POST['datum']))		$datum		= htmlspecialchars($_POST['datum']);
-        if(isset($_POST['kommentar']))	$kommentar	= htmlspecialchars($_POST['kommentar']);
-    }
-*/
+$time_diff = strtotime('12:45:00') - strtotime('11:00:00');
+    echo $time_diff/60;
 
 $mysqli->query("INSERT INTO workload (id, Datum, Bezeichnung, Start, Ende, Gesamt, Bemerkung, Ort) VALUES (null, '$value', '$value2',
      '$value3', '$value4','$value0' , '$value5', '$value6')");
 
-/*
- * 	switch($action) {
-        case "edit":
-            $mysqli->query("UPDATE route SET etappe='$etappe', region='$region', datum='$datum', kommentar='$kommentar' WHERE id='$id'");
-            break;
 
-        case "delete":
-            $id	= htmlspecialchars($_GET['id']);
-            $mysqli->query("DELETE FROM route WHERE id = $id;");
-            break;
-
-        case "add":
-            $mysqli->query("INSERT INTO route (id, etappe, region, datum, poi, kommentar) VALUES (NULL, '$etappe', '$region', '$datum', NULL, '$kommentar');");
-            break;
-
-        default:
-            break;
-    }
-*/
 	$mysqli->close();
-	/*header("Location: http://$host$uri/$extra");*/
+	header("Location: http://$host$uri/$extra");
 ?>

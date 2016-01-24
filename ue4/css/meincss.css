@@ -1,6 +1,7 @@
 body {
 		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
         background-image: url(../img/hintergrund.png);
+
 	}
 footer {
 	padding: 10px; /* ABstand Rahmen - Text */
@@ -11,13 +12,6 @@ footer {
 }
 h1 {
 	text-align: center;
-}
-#filter {
-			
-			text-align: center;
-			}
-#filter input, label {
-    display:inline;
 }
 
 a {text-decoration: none;}

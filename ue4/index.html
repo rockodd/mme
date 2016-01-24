@@ -10,33 +10,15 @@
  <title>Student Timemanager</title>
 
  <!-- Bootstrap -->
- <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
+ <link href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" rel="stylesheet" media="screen">
 
- <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
 
  <!-- jquery -->
- <script type="text/javascript" language="javascript" src="js/jquery.js"></script>
- <script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
- <script type="text/javascript" language="javascript" class="init">
-
-  var editor; // use a global for the submit and return data rendering in the examples
-
-
-  $(document).ready(function() {
-   $('#example').dataTable( {
-
-
-    "aProcessing": true,
-    "aServerSide": true,
-    "ordering": true,
-    "order": [[ 3, "desc" ]],
-    "info":     false,
-    "ajax": "server-response.php",
-   } );
-  } );
-
-
- </script>
+ <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+ <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+ <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.10/js/dataTables.bootstrap.min.js"></script>
+ <script src= "js/init.js"></script>
 
  <link href="css/meincss.css" rel="stylesheet" media="screen">
 
@@ -122,35 +104,8 @@
 
  <section>
 
-  <h1 id= "suche"> Suche</h1>
-  <form id="filter">
-   <div class="form-group">
-    <label for="projects">Projekt</label>
-    <div class="btn-group">
-     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      MME-Projekt <span class="caret"></span>
-     </button>
-     <ul class="dropdown-menu">
-      <li><a href="">SE-Projekt</a></li>
-      <li><a href="">FPA-Projekt</a></li>
-      <li><a href="">Mathe-Projekt</a></li>
-
-     </ul>
-    </div>
-   </div>
-
-   <div class="form-group">
-    <label for="beispielFeldVon">Von</label>
-    <input type="date"  id="beispielFeldVon" placeholder="Von">
-   </div>
-   <div class="form-group">
-    <label for="beispielFeldBis">Bis</label>
-    <input type="date"  id="beispielFeldBis" placeholder="Bis">
-   </div>
-   <button type="submit" class="btn btn-primary">Filter</button>
-
-  </form>
- </section>
+  <h1 id= "suche"> Workload</h1>
+  </section>
 
 
  <div id="overlay"></div>
@@ -207,8 +162,12 @@
   <!-- </div> -->
  </div>
 
+<!--
  <div class="table-responsive">
-<table class="table table-hover"  id="example" id="tabelle">
+  <table class="table table-hover"  id="example" id="tabelle">
+ -->
+
+ <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
  <thead>
  <tr>
   <th id="datum">Datum</th>
@@ -237,8 +196,8 @@
   </div>
  </div>
 
-</div>
 
+</div>
 
 <footer>
 
@@ -257,8 +216,9 @@
 <!--<script src="//code.jquery.com/jquery.js"></script>-->
 <script src="js/bootstrap.min.js"></script>
 <script src="http://maps.googleapis.com/maps/api/js"></script>
-<script src= "js/meinjs.js"></script>
+ <script src= "js/meinjs.js"></script>
 
 
 </body>
+
 </html>
